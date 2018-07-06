@@ -1,0 +1,7 @@
+.customfont {
+    @font-face {
+        font-family: 'dotmat';
+        src: url('www/fonts/dotmat.eot');
+        src: url('../www/fonts/dotmat.eot') format('embedded-opentype'), url('../www/fonts/dotmat.woff2') format('woff2'), url('../www/fonts/dotmat.woff') format('woff'), url('../www/fonts/dotmat.ttf') format('truetype'), url('../www/fonts/dotmat.svg#dotmat') format('svg');
+    }
+}

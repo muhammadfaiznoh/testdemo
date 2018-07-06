@@ -1,0 +1,116 @@
+      /*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/                                               
+                         
+$assertive: #FDC24E !default;
+$green-deep: #0BD318 !default;
+$green-light: #87FC70 !default; 
+$brown: #696057 !default; //login form section separator bg, topbar content separator bg
+$dark: #231F20 !default; //login logo bg, topbar bg, bottombar bg
+$gray: #404041 !default; //login form bg
+$gray2: #4C4C4C  !default; //login form edit text
+$gray3: #898B8E !default; //topbar date text
+$light2: #E5E5E5 !default; //login form edit text bg 
+$light3: #FFFFFF !default; //events white font, bottombar text
+$white: #FFFEFE !default; //login form button text, topbar title text
+$pink-deep:#951b50 !default; //login form button bg gradient bottom
+$pink-light:#ce1f70 !default; //login form button bg gradient top
+$green:#8CC63E !default; //ongoing theme color
+$yellow:#FFD600 !default; //pending theme color 
+$red:#ED1C24 !default; //closed theme color
+$red-deep:#75191B !default; //percentage field property bg
+$brown-deep:#9C8461 !default; //percentage field value bg
+$orange-light:#f99f1b !default;
+$orange-deep: #ffca06 !default;
+$orange: #F99F1E !default;
+         
+ 
+$form-input-text-bg: $light2; 
+$form-input-text-color: $gray2;
+$form-btn-bg-gradient-start: $pink-deep;  
+$form-btn-bg-gradient-end: $pink-light;
+ 
+$section-separator-bg: $orange;
+$top-content-bg: $orange;
+$content-bg: $light3;
+  
+$percentage-field-border-color: $white;
+$percentage-field-property-bg: $red-deep; 
+$percentage-field-property-text-color: $light3;
+$percentage-field-value-bg: $brown-deep;
+$percentage-field-value-text-color: $light3;
+      
+$bar-bg: $dark;   
+$bar-text-color:$light3;
+$bar-subtext-color: $gray3;      
+                    
+$event-ongoing-theme:$green;   
+$event-pending-theme:$yellow;  
+$event-closed-theme:$red;
+    
+$item-default-active-bg:lighten( $gray, 10% ) !default;
+
+$sidemenu-break-xs:320px; 
+$sidemenu-break-sm:400px;         
+    
+      
+$fa-font-path: "../lib/fontawesome/fonts" !default;
+@import "www/lib/fontawesome/scss/font-awesome";
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default; 
+// Include all of Ionic 
+      
+                               
+   
+   
+@import "www/lib/ionic/scss/ionic";
+@import "www/lib/ionic-filter-bar/scss/ionic.filter.bar";
+@import "www/lib/ionic-social-buttons/ionic-social-buttons.scss";                   
+       
+            
+            
+       
+@import "u";       
+@import "app";
+@import "materialmotion";
+@import "menu";      
+@import "filter";
+@import "login";  
+@import "signup";  
+@import "forgot";
+@import "modal"; 
+@import "camera";
+@import "cameraview";
+@import "map";
+@import "highlight";
+@import "Event";
+@import "report";
+@import "parking";  
+@import "setting";
+@import "subpage";      
+@import "direction";
+@import "verify";
+@import "popover"; 
+@import "profile";
+@import "vms";
+@import "ert";
+@import "sleep";
+@import "animation";
+@import "walkthrough";
+@import "about";
+@import "customfont";
+

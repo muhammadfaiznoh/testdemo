@@ -1,0 +1,19 @@
+#about {
+    //    Implements UI styling here
+    ion-content {
+        background: url(../img/background-about.png) no-repeat fixed;
+        background-size: cover;
+        .a9 {
+            //                    position: absolute !important;
+            font-size: 1.5em !important;
+                        margin-top: 8% !important;
+            text-align: center !important;
+        }
+        .a10 {
+            //                    position: absolute !important;
+            font-size: 1.5em !important;
+                        margin-top: 76% !important;
+            text-align: center !important;
+        }
+    }
+}

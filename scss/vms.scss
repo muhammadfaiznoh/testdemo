@@ -1,0 +1,22 @@
+#vms {
+    ion-content {
+        background-color: #F2F0F5;
+        color: #000;
+        ion-item {
+            color: black;
+        }
+    }
+    ion-item{
+        background-color: #FFF;
+        border: 1px solid #F2F0F5;
+    }
+    .listdir {
+        
+        color: #000;
+        .spacing {
+            margin-top: 10px;
+            padding-left: 10px;
+            .camera-item {}
+        }
+    }
+}

@@ -1,0 +1,110 @@
+<ion-view id="profile">
+
+    <ion-content>
+
+         <img id="logo" src="img/profile_header.png" width="100%" height="auto" style="position:absolute;">
+        <ion-item class="text-center" style="border:none">
+            <div class="overlay" ng-click="edit_profile()">
+                <img id="profile-image" ng-src="data:image/jpeg;base64,{{up_image}}" ng-click="addMedia()" ng-if="up_image !== null">
+                <img id="profile-image" ng-src="img/no_profile_image.png" ng-click="addMedia()" ng-if="up_image === null">
+            </div>
+
+
+        </ion-item>
+
+        <ion-list class="list animate-fade-slide-in-right">
+            <!--
+                <div class="border-setting zeromargin list-color" ion-ripple item-type="item-icon-left" ng-click="actionLang()">
+
+                <div class="item range list-color">
+                    <i class="icon ion-volume-low"></i>
+                    <input type="range" name="volume">
+                    <i class="icon ion-volume-high"></i>
+                </div>
+                </div>
+-->
+            <!--
+                <ion-item item-type="item-icon-left" ng-click="">
+                    <i class="icon ion-volume-medium"></i><span> SOUND</span>
+                </ion-item>
+-->
+
+
+            </ion-item>
+            <!--
+                <div class="border-setting zeromargin list-color" ion-ripple item-type="item-icon-left" ng-click="actionLang()">
+                    <i class="icon ion-ios-chatbubble"></i><span> LANGUAGE</span>
+                </div>
+-->
+            <!--
+                <ion-item item-type="item-icon-left" ng-click="actionProfile()">
+                    <i class="icon ion-unlocked"></i><span> ACCOUNT &amp; LOGIN</span>
+                </ion-item>
+-->
+            <!--
+            <ion-label color="primary" stacked>Full Name</ion-label>
+            <label class="item item-input">
+                <input type="text" placeholder="{{up_name}}">
+            </label>
+-->
+            <label class="item item-input item-stacked-label" style="background: white;">
+                <span class="input-label">Full Name</span>
+                <input id="input_name" type="text" placeholder="{{up_name}}" ng-model="update.name" />
+            </label>
+            <label class="item item-input item-stacked-label" style="background: white;">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="{{up_email}}" ng-model="update.email">
+            </label>
+            <label class="item item-input item-stacked-label" style="background: white;">
+                <div style="100%">
+                    <span class="input-label" style="float:left">Password</span>
+                    <button class="button icon ion-gear-b" style="float:right;margin-right:10px" ng-click="changePassword(update.email)"></button>
+                </div>
+                <input type="password" placeholder="{{up_password}}" ng-model="update.password">
+            </label>
+            <label class="item item-input item-stacked-label" style="background: white;">
+                <span class="input-label">Phone Number</span>
+                <input type="text" placeholder="{{up_phone}}" ng-model="update.phone">
+            </label>
+        </ion-list>
+        <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:10%">
+            <button class="col col-90 button dev-button img-centered" style="width:100%; line-height:10px" ng-click="submit(update.name,update.email,update.phone)">
+                UPDATE PROFILE
+            </button>
+        </div>
+        <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+            <button class="col col-90 button dev-button img-centered" style="width:100%; line-height:10px" ng-click="back()">
+                BACK
+            </button>
+        </div>
+
+        <!--
+        <div id="profile-bg"></div>
+       <img src="../../img/header-bg.png" width="100%" height="auto">
+        <div id="content">
+             
+            <div id="profile-info">
+                <img id="profile-image" ng-src="{{up_image}}" ng-if="up_image !== null">
+                <img id="profile-image" ng-src="img/no_profile_image.png" ng-if="up_image === null">
+                <h3 id="profile-name">{{up_name}}</h3>
+                
+                <div id="profile-description">{{up_email}}</div>
+                <div id="profile-description">{{up_phone}}</div>
+                
+            </div>
+            <ion-list>
+                <ion-item ng-repeat="post in posts">
+                    <img class="post-profile-image" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/94311/me.png"> {{post.text}}
+                    <div class="post-time">post.created_at</div>
+                    <div class="post-options">
+                        <i class="icon-reply"></i>
+                        <i class="icon-shuffle"></i>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        
+-->
+
+    </ion-content>
+</ion-view>

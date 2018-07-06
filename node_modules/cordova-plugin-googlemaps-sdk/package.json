@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+        "spec": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+          "sshUrl": "git+ssh://git@github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+          "httpsUrl": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+          "gitUrl": "git://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+          "shortcut": "github:mapsplugin/cordova-plugin-googlemaps-sdk#2.7.0",
+          "directUrl": "https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps-sdk/2.7.0/package.json"
+        }
+      },
+      "/Users/rsaimac/Desktop/jlm"
+    ]
+  ],
+  "_from": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+  "_id": "cordova-plugin-googlemaps-sdk@2.7.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-googlemaps-sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+    "spec": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+      "sshUrl": "git+ssh://git@github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+      "httpsUrl": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+      "gitUrl": "git://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+      "shortcut": "github:mapsplugin/cordova-plugin-googlemaps-sdk#2.7.0",
+      "directUrl": "https://raw.githubusercontent.com/mapsplugin/cordova-plugin-googlemaps-sdk/2.7.0/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#4d65e12ba1219902980ff4513d7b38e125e358d3",
+  "_shasum": "f8753d7754ad17705620f04394a8051091a5c44c",
+  "_shrinkwrap": null,
+  "_spec": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git#2.7.0",
+  "_where": "/Users/rsaimac/Desktop/jlm",
+  "author": {
+    "name": "Masashi Katsumata, Hirbod Mirjavadi"
+  },
+  "bugs": {
+    "url": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-googlemaps-sdk",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "Google Maps SDK for iOS for Cordova (files are copied from Google)",
+  "devDependencies": {},
+  "gitHead": "4d65e12ba1219902980ff4513d7b38e125e358d3",
+  "homepage": "https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk#readme",
+  "name": "cordova-plugin-googlemaps-sdk",
+  "optionalDependencies": {},
+  "readme": "# Google Maps SDK for iOS for Cordova\n\nThis plugin installs Google Maps SDK for iOS (v2.7.0) into your project **without CocoaPods**.\n\n# License and Terms of Service (for this plugin)\n\n* This plugin **itself** is [MIT license](./LICENSE.md), which is one of the weakest software license.\n\n# License and Terms of Service (Google Map SDK for iOS)\n\nBy using the Google Maps SDK for iOS you accept Google's Terms of Service and\nPolicies. Pay attention particularly to the following aspects:\n\n*   Depending on your app and use case, you may be required to display\n    attribution. Read more about [attribution requirements]\n    (https://developers.google.com/maps/documentation/ios-sdk/intro#attribution_requirements).\n*   Your API usage is subject to quota limitations. Read more about [usage\n    limits](https://developers.google.com/maps/pricing-and-plans/).\n*   The [Terms of Service](https://developers.google.com/maps/terms) are a\n    comprehensive description of the legal contract that you enter with Google\n    by using the Google Maps SDK for iOS. You may want to pay special attention\n    to [section 10]\n    (https://developers.google.com/maps/terms#10-license-restrictions), as it\n    talks in detail about what you can do with the API, and what you can't.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git"
+  },
+  "version": "2.7.0"
+}

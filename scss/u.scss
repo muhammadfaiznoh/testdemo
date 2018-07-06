@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Utility
+   ========================================================================== */
+//[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+//  display: none !important;
+//}
+*{
+//    border:solid 1px red !important;
+}
+
+.transparent {
+  background: #404041 !important;
+}
+
+@mixin create-color($word, $css) {
+    .#{$word}-light {
+        #{$css}:$light;   
+    }
+    .#{$word}-stable {
+        #{$css}:$stable;   
+    }
+    .#{$word}-positive {
+        #{$css}:$positive;   
+    }
+    .#{$word}-calm {
+        #{$css}:$calm;   
+    }
+    .#{$word}-balanced {
+        #{$css}:$balanced;   
+    }
+    .#{$word}-energized {
+        #{$css}:$energized;   
+    }
+    .#{$word}-assertive {
+        #{$css}:$assertive;   
+    }
+    .#{$word}-royal {
+        #{$css}:$royal;   
+    }
+    .#{$word}-dark {
+        #{$css}:$dark;   
+    }
+}
+
+@mixin create-margin($word, $value) {
+    .margin-#{$word} {
+        margin:$value !important;   
+    }
+
+    .margin-top-#{$word} {
+        margin-top:$value !important;   
+    }
+
+    .margin-bottom-#{$word} {
+        margin-bottom:$value !important;   
+    }
+
+    .margin-left-#{$word} {
+        margin-left:$value !important;   
+    }
+
+    .margin-right-#{$word} {
+        margin-right:$value !important;   
+    }
+
+    .margin-horizontal-#{$word} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+    }
+
+    .margin-vertical-#{$word} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+    }
+}
+
+@mixin create-padding($word, $value) {
+    .padding-#{$word} {
+        padding:$value !important;   
+    }
+
+    .padding-top-#{$word} {
+        padding-top:$value !important;   
+    }
+
+    .padding-bottom-#{$word} { 
+        padding-bottom:$value !important;   
+    }
+
+    .padding-left-#{$word} {
+        padding-left:$value !important;   
+    }
+
+    .padding-right-#{$word} {
+        padding-right:$value !important;   
+    }
+
+    .padding-horizontal-#{$word} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+
+    .padding-vertical-#{$word} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+}
+
+@include create-color('bg', background-color);
+@include create-color('text', color);
+
+@include create-padding('0', 0px);
+@include create-padding('xxxs', 2px);
+@include create-padding('xxs', 5px);
+@include create-padding('xs', 10px);
+@include create-padding('md', 20px);
+@include create-padding('lg', 40px);
+@include create-padding('xlg', 60px);
+@include create-padding('xxlg', 90px);
+
+@include create-margin('0', 0px);
+@include create-margin('xxxs', 2px);
+@include create-margin('xxs', 5px);
+@include create-margin('xs', 10px);
+@include create-margin('md', 20px);
+@include create-margin('lg', 40px);
+@include create-margin('xlg', 60px);
+@include create-margin('xxlg', 90px);
+
+.full-width {
+    width:100%;   
+}
+.full-height {
+    height:100%;   
+}
+.font-bold {
+    font-weight:900;   
+}
+.nowrap {
+    display: inline-block;
+}
+.responsive-container {
+    position: relative;
+    >canvas:first-child {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+    >.responsive-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+}
+.float-left { float:left; }
+.float-right { float:right; }
+
+.circle {
+    border-radius: 50%;
+}
+.pointer-events-none {
+    pointer-events: none;   
+}
+.text-left {
+    text-align:left;   
+}
+.text-right {
+    text-align:right;   
+}
+.text-center {
+    text-align:center;   
+}
+.block-center {
+    margin-left:auto;
+    margin-right:auto;
+}
+.iframe-container{
+    height:100%;
+}
+
+.border-color-transparent {
+    border-color:transparent !important;
+}
+.inputspacing{
+    padding-top: 11.2px;
+    padding-bottom: 11.2px;
+    @media screen and (min-width: 320px) {
+        padding: 0;
+    }
+}

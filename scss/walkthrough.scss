@@ -1,0 +1,98 @@
+#walkthrough {
+    //    Implements UI styling here
+    /* .walkthroughbackground {
+                        position: relative;
+                        display: inline-block;
+                    }*/
+    body {
+        cursor: url('http://ionicframework.com/img/finger.png'), auto;
+    }
+    .slider {
+        height: 100%;
+    }
+    .slider-slide {
+        padding-top: 80px;
+        color: #000;
+        background-image: url('../img/sleepmode1.png');
+        background-size: 100% auto;
+        /*width: 100%;
+        height: auto;*/
+        position: relative;
+        display: inline-block;
+        /*background-color: #FFF;*/
+        text-align: center;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+    }
+    .a1 {
+        font-size: 133%;
+    }
+    #logo {
+        margin: 8% 0%;
+    }
+    #list {
+        margin: 8% 0%;
+        /*width: 170px;
+        margin: 30px auto;
+        font-size: 20px;*/
+    }
+    /* #list ol {
+        margin-top: 30px;
+    }*/
+    /* #list ol li {
+        text-align: left;
+        list-style: decimal;
+        margin: 10px 0px;
+    }*/
+    .button.ng-hide {
+        display: none;
+    }
+    #koko {
+        @media screen and (max-height: 480px) {
+            margin-top: 8%;
+            line-height: 66%;
+            font-size: 96%;
+        }
+        @media screen and (min-height: 481px) {
+            margin-top: 8%;
+            line-height: 66%;
+            font-size: 100%;
+        }
+    }
+    #koko1 {
+        @media screen and (max-height: 480px) {
+            margin-top: 8%;
+            line-height: 66%;
+            font-size: 96%;
+        }
+        @media screen and (min-height: 481px) {
+            margin-top: 8%;
+            line-height: 66%;
+            font-size: 100%;
+        }
+    }
+    #imgWalk1 {
+        @media screen and (max-height: 480px) {
+            width: 50%;
+        }
+        @media screen and (min-height: 481px) {
+            width: 65%;
+        }
+    }
+    #imgWalk2 {
+        @media screen and (max-height: 480px) {
+            width: 25%;
+        }
+        @media screen and (min-height: 481px) {
+            width: 35%;
+        }
+    }
+    #imgWalk3 {
+        @media screen and (max-height: 480px) {
+            width: 56%;
+        }
+        @media screen and (min-height: 481px) {
+            width: 76%;
+        }
+    }
+}

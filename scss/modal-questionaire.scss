@@ -1,0 +1,80 @@
+#satisfaction {
+    .satisfaction-details {
+        * {
+            //            border: solid 1px red;
+        }
+        @include display-flex();
+        @include flex-direction(row);
+        .color-font {
+            color: #000;
+        }
+        .firstBox {
+            white-space: normal;
+            text-align: center;
+            @include flex(1, 1, 100%);
+            @include display-flex();
+            @include flex-direction(column);
+            //            margin: 2px;
+            background-color: #FFF;
+            height: 70px;
+            //            padding: 5px;
+            font-size: 80%;
+            line-height: 20px;
+            //            margin-top: 10px; 
+            ion-item.item {
+                color: black;
+            }
+            .branch {
+                //                color: #000;
+                //                font-size: 1.2em;
+                //                line-height: 100%;
+                //                position: absolute;
+                text-align: center !important;
+                //                top: 16px;
+                //                left: 16px;
+                //                margin-bottom: 10px;
+                //                margin-top: 5px;
+                //                margin: 5px 0px 10px 0px;
+            }
+            img {
+                opacity: 0.4;
+                filter: alpha(opacity=40);
+                /* msie */
+                background-color: #000;
+            }
+            img:active {}
+        }
+        .secondBox {
+            white-space: normal;
+            text-align: center;
+            @include flex(1, 1, 100%);
+            @include display-flex();
+            @include flex-direction(column);
+            //            margin: 2px;
+            background-color: #FFF;
+            height: 70px;
+            //            padding: 5px;
+            font-size: 80%;
+            line-height: 20px;
+            //            margin-top: 10px; 
+            ion-item.item {
+                color: black;
+            }
+            .branch {
+                color: #000;
+                font-size: 1.2em;
+                line-height: 100%;
+                //                position: absolute;
+                text-align: left;
+                //                top: 16px;
+                //                left: 16px;
+                //                margin-bottom: 10px;
+                //                margin-top: 5px;
+                margin: 5px 0px 10px 0px;
+                .date-time {
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}

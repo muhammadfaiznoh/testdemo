@@ -1,0 +1,77 @@
+<ion-view id="ert">
+
+    <ion-content>
+        <ion-refresher on-refresh="onRefresh()">
+        </ion-refresher>
+        
+        <div class="highlight-content">
+
+            <div class="row button-content ert_beehive">
+
+                <a ng-click="actionJobList()" class="left-btn col button dev-button" style="margin-right:4px; line-height:20px; height:30px">JOB LIST</a>
+
+
+                <a ng-click="actionReport()" class="right-btn col button dev-button" style="line-height:20px; height:30px">REPORT</a>
+
+            </div>
+        <ion-list class="listdir" ng-if="type">
+            <div style="margin-top: 10%;"></div>
+                <ion-item class="padding-xxs item-icon-right" ng-repeat="item in joblist" item-width="100%" item-height="!item.isSummary?80:95" ng-click="actionJobDetails($index)" style="height: 80px;">
+                    <div class="spacing">
+                        <div class="item-thumbnail-left" style="padding-left: 70px;">
+                            <img style="max-width: 50px; max-height: 60px" class="back-color" src="{{images[item.type - 1]}}">
+                            <div class="item-thumb-content"><small><strong>{{item.title}}</strong>
+                                <div><small>{{item.date}}</small></div>
+                            <!--                                <div><small>{{item.details}}</small></div>-->
+                            <div><small>{{item.reported_time}} {{"("+item.location+ ")"}}</small></div>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        <div ng-if="!type">
+            <img class="overlay" ng-src="img/beehive.png" width="100%" height="auto">
+            <table style="border:none">
+            <tr>
+                <td>
+                    <a ng-click="actionType(1)"><img class="positionabs animated fadeInLeftBig overlay-image-a" ng-src="img/ktrafficlight.png" width="29%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-a" ng-src="img/beehive_text/trafficlight_text.png" width="29%" height="auto">
+                </td>
+                <td>
+                    <a ng-click="actionType(2)"><img class="positionabs animated fadeInLeftBig overlay-image-b" ng-src="img/Accident_hex.png" width="29%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-b" ng-src="img/beehive_text/Accident_text.png" width="22%" height="auto">
+                </td>
+                <td>
+                    <a ng-click="actionType(3)"><img class="positionabs animated fadeInLeftBig overlay-image-c" ng-src="img/kbreakdown.png" width="29%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-c" ng-src="img/beehive_text/Breakdown_text.png" width="31%" height="auto">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a ng-click="actionType(4)"><img class="positionabs animated fadeInRightBig overlay-image-d" ng-src="img/kflood.png" width="27%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-d" ng-src="img/beehive_text/Flood_text.png" width="16%" height="auto">
+                </td>
+                <td>
+                    <a ng-click="actionType(5)"><img class="positionabs animated fadeInRightBig overlay-image-e" ng-src="img/kfallentree.png" width="29%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-e" ng-src="img/beehive_text/Fallentrees_text.png" width="45%" height="auto">
+                </td>
+                <td>
+                    <a ng-click="actionType(6)"><img class="positionabs animated fadeInRightBig overlay-image-f" ng-src="img/klandslide.png" width="29%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-f" ng-src="img/beehive_text/Landslide_text.png" width="23%" height="auto">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a ng-click="actionType(7)"><img class="positionabs animated fadeInRightBig overlay-image-g" ng-src="img/kpotholes.png" width="29%" height="auto"></a>
+                    <img class="positionabs animated fadeInDownBig text-coordinate-g" ng-src="img/beehive_text/potholes_text.png" width="32%" height="auto">
+                </td>
+                <td></td>
+            </tr>
+            </table>
+                                                            
+        </div>
+    </ion-content>
+
+</ion-view>

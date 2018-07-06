@@ -1,0 +1,110 @@
+ #mapmain {
+     ion-content {
+         z-index: -1;
+     }
+     .button-clear {
+         transition: opacity 0.1s;
+         padding: 0 6px;
+         max-height: 75px;
+     }
+     ion-item {
+         border: none;
+     }
+     ion-drawer-vertical-content {
+         background-color: #485053;
+         z-index: -1;
+     }
+     #map {
+         width: 100%;
+         height: 100%;
+     }
+     .scroll {
+         height: 100%;
+     }
+     .btn-footer {
+         color: #FFF;
+     }
+     //            .high-cctv-parking {
+     //                line-height: normal;
+     //                
+     //                .icon-text {
+     //                    margin-top: 5%;
+     //                }
+     //            }
+ }
+ 
+ .height-line {
+     line-height: normal;
+     @media screen and (max-height: 568px) {
+         line-height: inherit;
+         font-size: 1em;
+     }
+ }
+ 
+ .verticalLine {
+     margin-top: 5%;
+     border-left: solid #FFF;
+     //            height: 50%;
+ }
+ 
+ //        .img-sizes {
+ //            width: 18% !important;
+ //            height: auto !important;
+ //        }
+ .button-setting {
+     margin-top: 5%;
+ }
+ 
+ .button-height {
+     max-height: 90px !important;
+     @media screen and (max-height: 568px) {
+         max-height: 68px !important;
+     }
+ }
+ 
+ .drawerspacing {
+     margin-top: 5%;
+     @media screen and (max-height: 480px) {
+         margin-top: 2%;
+     }
+ }
+ 
+ .card {
+     background-color: transparent;
+ }
+ 
+ .item.item-stable {
+     background-color: transparent;
+ }
+ 
+ .button-clear.button-clear {
+     border-color: transparent;
+     background: none;
+     box-shadow: none;
+     color: #fff;
+ }
+ 
+ .popup-buttons .button:last-child {
+     margin-right: 0px;
+     background-color: #f99f1e;
+     color: #FFF;
+ }
+ 
+ // ion-drawer-vertical-wrapper {
+ //    
+ //     height: 36%;
+ //     @media screen and (max-height: 480px) {
+ //         max-height: 68px !important;
+ //     }
+ //   
+ // }
+ .scroll {
+     height: 100%;
+ }
+ 
+ #map_canvas {
+     width: 100%;
+     height: 100%;
+ }
+ 
+ 

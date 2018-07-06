@@ -1,0 +1,42 @@
+#highlight {
+    ion-content {
+        .left-btn {
+            background-image: url(../img/newleft.png);
+            background-size: 103% auto;
+            background-repeat: no-repeat;
+            background-position: -1px;
+            COLOR: black;
+        }
+        .right-btn {
+            background-image: url(../img/newright.png);
+            background-size: 103% auto;
+            background-repeat: no-repeat;
+            background-position: -1px;
+            COLOR: black;
+        }
+        background-color: #FFF;
+        .highlight-content {
+            .ui.button:focus {
+                background-color: red;
+            }
+            margin-top: 10px;
+            .button-content {
+                //                margin-bottom: 8px;
+            }
+            ion-item {
+                background-color: #FFF;
+                border: 1px solid #F2F0F5;
+            }
+            .listdir {
+                .item-thumb-content {
+                    white-space: normal;
+                }
+                .back-color {
+                    //                    background-color: #fff;
+                    color: black;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}

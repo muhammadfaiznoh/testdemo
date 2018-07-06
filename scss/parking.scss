@@ -1,0 +1,118 @@
+#parking {
+    ion-content {
+        background-color: #F2F0F5;
+    }
+   
+    .slider-slides ion-slide ion-content {
+        top: 54px;
+    }
+    .topBar {
+        background-color: #DBDBDB;
+        color: #000;
+    }
+    .director-sales-item {
+        * {
+            //                               border:solid 1px red;
+        }
+        @include display-flex();
+        @include flex-direction(row);
+        .color-font {
+            color: #000;
+        }
+        .project {
+            white-space: normal;
+            text-align: center;
+            @include flex(1, 1, 100%);
+            @include display-flex();
+            @include flex-direction(column);
+            //            margin: 2px;
+            background-color: #FFF;
+            
+            height: 70px;
+            //            padding: 5px;
+            font-size: 80%;
+            line-height: 20px;
+            //            margin-top: 10px; 
+            ion-item.item{
+                color: black;
+            }
+            .branch {
+                color: #000;
+                font-size: 1.2em;
+                line-height: 100%;
+                //                position: absolute;
+    
+                text-align: left;
+//                top: 16px;
+                //                left: 16px;
+                //                margin-bottom: 10px;
+                //                margin-top: 5px;
+                margin: 5px 0px 10px 0px;
+                .date-time {
+                    font-size: 0.9em;
+                }
+            }
+        }
+        //        .project-sale {
+        //            white-space: normal;
+        //            text-align: center;
+        //            @include flex(1, 1, 50%);
+        //            @include display-flex();
+        //            @include flex-direction(column);
+        //            @include justify-content(center);
+        //            @include align-items(center);
+        //            margin: 2px;
+        //            background-color: #DBDBDB;
+        //            height: 115px;
+        //            padding: 5px;
+        //            font-size: 80%;
+        //            line-height: 20px;
+        //            border-radius: 10px;
+        //            margin-right: 5px;
+        //        }
+        .detail {
+            @include flex(1, 1, 100%);
+            @include display-flex();
+            @include flex-direction(column);
+            .count-percent {
+                @include flex(1, 1, 60px);
+                @include display-flex();
+                @include flex-direction(row);
+                .count {
+                    @include flex(1, 1, 100%);
+                    white-space: normal;
+                    text-align: center;
+                    background-color: #000;
+                    margin: 2px;
+                    .label {
+                        font-size: 30px;
+                        padding: 2px 5px 0 5px;
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                    .value {
+                        padding: 8px 5px 5px 5px;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                }
+                .percent {
+                    @include flex(1, 1, 100%);
+                    @include display-flex();
+                    @include flex-direction(row);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    background-color: #F37320;
+                    margin: 2px;
+                    padding: 5px;
+                    font-size: 25px;
+                    max-width: 50px;
+                    .percentsign {
+                        font-size: 10px;
+                        line-height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+<ion-view id="highlight">
+
+    <ion-content on-scroll="getScrollPosition()" delegate-handle="ScrollToBot">
+        <ion-refresher on-refresh="onRefresh()">
+        </ion-refresher>       
+
+        
+        <div class="highlight-content">
+            
+
+            <div class="row button-content">
+
+<!--
+                <a ng-click="actionButtonTraffic()" class="left-btn col button dev-button" style="margin-right:4px; line-height:20px; height:30px" ng-if="show">INFO TRAFFIC</a>
+                
+ <a ng-click="actionButtonTraffic()" class="left-btn1 col button dev-button" style="margin-right:4px; line-height:20px; height:30px" ng-if="hide">INFO TRAFFIC</a>
+
+
+                <a ng-click="actionButtonEvent()" class="right-btn col button dev-button" style="line-height:20px; height:30px" ng-if="hide">INFO DBKL</a>
+
+                <a ng-click="actionButtonEvent()" class="right-btn1 col button dev-button" style="line-height:20px; height:30px" ng-if="show">INFO DBKL</a>
+-->
+<html ng-app="app">
+<div class="bar bar-header bar-light" style="margin-right:4px; line-height:20px; height:40px">
+
+  <ion-segment ng-model="categories" full="true"  assertive>
+  <ion-segment-button value="traffic" ng-click="actionSkip()" >
+   INFO TRAFFIC
+  </ion-segment-button>
+  <ion-segment-button value="dbkl" ng-click="actionSkip()">
+    INFO DBKL
+  </ion-segment-button>
+ 
+  
+</ion-segment>
+    
+  </div>
+    
+<!--<ion-content class="has-header">-->
+
+  <div ng-switch="categories" style="margin-top:40px; line-height:20px; height:30px">
+
+    <ion-list ng-switch-when="traffic" class="listdir" >
+       <ion-item class="padding-xxs item-icon-right" ng-repeat="item in items" item-width="100%" item-height="!item.isSummary?120:145" ng-click="actionListEvent($index)">
+                    <div class="spacing">
+                        <div class="item-thumbnail-left" style="color:#000;">
+                            <img ng-if="item.type !== '10'" class="back-color" src="{{images[item.type-1]}}" style="width:auto; margin-top:0; margin-left: 15px;">
+                            <img ng-if="item.type === '10'" class="back-color" src="img/icon/RoadEvent.png" style="width:auto; margin-top:0; margin-left: 15px;">
+                            <div class="item-thumb-content">
+                                <small>
+                                    <strong ng-if="item.type !== '10'">{{item.title}}</strong>
+                                    <strong ng-if="item.type === '10'">{{item.url}}</strong>
+                                    <div><strong><small>{{title[item.type-1]}}</small></strong></div>
+                                    <div ng-if="item.type !== '10'"><small>{{"Location : " + item.location}}</small></div>
+                                    <div ng-if="item.type === '10'"><small>Start Date:{{item.start_date}} {{item.start_time}}</small></div>
+                                      <div ng-if="item.type === '10'"><small>End  Date:{{item.end_date}} {{item.end_time}}</small></div>
+                                      <div ng-if="item.type === '10'"><small>Location: {{item.location}}</small></div>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+    </ion-list>
+
+    <ion-list ng-switch-when="dbkl" class="listdir">
+       <ion-item class="padding-xxs item-icon-right" ng-repeat="item in data" item-width="100%" item-height="!item.isSummary?120:145" 
+                    ng-click="actionListInfo($index)" ng-if="item.type_event === 'info'">
+                    <div  class="spacing">
+                        <div class="item-thumbnail-left" style="color:#000;">
+                            <img class="back-color" src="img/icon/infoicon.png" style="width:66.55px;height:auto;margin-top:0; margin-left: 15px;">
+                            <div class="item-thumb-content">
+                                <small>
+                                    <strong>{{item.title}}</strong>
+                                    <div style="height:4.2em;overflow:hidden;text-overflow:ellipsis;"><small>{{"Detail : " + item.description}}</small></div>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+    </ion-list>
+   
+
+  </div>
+<!--</ion-content>-->
+
+</html>
+            </div>
+            
+<!--
+    <div ng-if=" show  " class=" button center" >
+            <h3 class="" >INFO TRAFFIC</h3>
+
+            <div >
+                <img  ng-src="img/guidetraffic.png" width="55%" height="auto" >
+                <div id="koko1" >
+                    <p style="color:#000;">
+                        User can check closed road during events to plan the journey.
+                    </p>
+                    
+                    <p>
+                        
+                    </p>
+                </div>
+                 <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+
+        </div>
+            </div> 
+                
+           <h3 class="" >INFO DBKL</h3>
+
+            <div >
+                <img  ng-src="img/guidedbkl.png" width="55%" height="auto" class="img-centered" >
+                <div id="koko1" >
+                    <p style="color:#000;">
+                        User can check news from DBKL like promotion and discount.
+                    </p>
+                    
+                   
+                </div>
+               
+            </div>
+                    </div>
+               <div ng-if="show" class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+            <button class="col col-90 button  img-centered" style="width:100%; line-height:10px; background-color: red; color:white" ng-click="actionStop()" >
+                Stop Showing This Message
+            </button>
+                     
+        </div>
+-->
+
+        </div>
+
+ 
+
+        
+    </ion-content>
+     <div class="float-button" ng-show="sttButton" ng-click="goBottom()">
+	<span class="height-fix">
+	  	<a class="content" >
+	    	<i class="ion-ios-arrow-down"> </i>
+	   	</a>
+	  </span>
+</div>
+</ion-view>

@@ -1,0 +1,165 @@
+            #report {
+                ion-item {
+                    border: none;
+                    padding:0;
+                    margin:0;
+                }
+                ion-content {
+                    z-index: -1;
+                    ion-drawer-vertical-content {
+                        background-color: #485053;
+                        z-index: -1;
+                    }
+                    .overlay {
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .positionabs {
+                        position: absolute;
+                    }
+                    .overlay-button-a {
+                        //        background-color: #f99f1e;
+                        top: calc(0%);
+                        left: calc(0%);
+                        color: black;
+                    }
+                    .overlay-image-a {
+                        //        background-color: #f99f1e;
+                        top: calc(20%);
+                        left: calc(43%);
+                    }
+                    .overlay-image-b {
+                        //        background-color: #f99f1e;
+                        top: calc(26.5%);
+                        left: calc(19%);
+                    }
+                    .overlay-image-c {
+                        //        background-color: #f99f1e;
+                        top: calc(37%);
+                        left: calc(40%);
+                    }
+                    .overlay-image-d {
+                        //        background-color: #f99f1e;
+                        top: calc(47%);
+                        left: calc(61%);
+                    }
+                    .overlay-image-e {
+                        //        background-color: #f99f1e;
+                        top: calc(57.5%);
+                        left: calc(40%);
+                    }
+                    .overlay-image-f {
+                        //        background-color: #f99f1e;
+                        top: calc(64%);
+                        left: calc(64%);
+                    }
+                    .overlay-image-g {
+                        //        background-color: #f99f1e;
+                        top: calc(73.5%);
+                        left: calc(43%);
+                    }
+                    .text-coordinate-a {
+                        top: calc(12.75%);
+                        left: calc(64%);
+                    }
+                    .text-coordinate-b {
+                        top: calc(18.35%);
+                        left: calc(4%);
+                    }
+                    .text-coordinate-c {
+                        top: calc(51.55%);
+                        left: calc(20%);
+                    }
+                    .text-coordinate-d {
+                        top: calc(41.05%);
+                        left: calc(68.6%);
+                    }
+                    .text-coordinate-e {
+                        top: calc(72.15%);
+                        left: calc(3.5%);
+                    }
+                    .text-coordinate-f {
+                        top: calc(78.65%);
+                        left: calc(72%);
+                    }
+                    .text-coordinate-g {
+                        top: calc(88.15%);
+                        left: calc(14.25%);
+                    }
+                    .serviceCategories {
+                        .category-title {
+                            padding-left: 10px;
+                            //                        color: $blue;
+                            font-size: 1.8em;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .col {
+                        padding: 4px;
+                    }
+                    .services-list {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    ion-item {
+                        border: none;
+                    }
+                    background-color: #F2F0F5;
+//                    .report-column {
+//                        height: 30%;
+//                    }
+//                    .report-column1 {
+//                        border: none;
+//                        background-color: #FFF !important;
+//                        height: 20%;
+                        .column-text-style {
+                            font-size: 1.8em;
+                            margin-top: 7%;
+                            color: black;
+                            text-align: center;
+                        }
+//                    }
+//                    .report-column2 {
+//                        height: 48%;
+//                    }
+                    .hr-column {
+                        height: 1%;
+                    }
+                    .item-paddings {
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                    ////                    .wrapper {
+                    ////                        position: relative;
+                    ////                    }
+                    ////                    .wrapper-btn {
+                    ////                        //            border: 1px solid red;
+                    ////                        bottom: 40%;
+                    ////                        right: 80%;
+                    ////                        //            bottom: 10px;
+                    ////                        //            right: 0;
+                    ////                        //            width: 10px;
+                    ////                        //            height: 30px;
+                    ////                        position: absolute;
+                    ////                        //            float: left;
+                    ////                    }
+                    ////                    .img-style {
+                    ////                        text-align: center;
+                    ////                    }
+                    //                }
+                    //                .card1 {
+                    //                    margin: 0;
+                    //                }
+                    //                .test1 {
+                    //                    -vendor-animation-duration: 3s;
+                    //                    -vendor-animation-delay: 2s;
+                    //                    -vendor-animation-iteration-count: infinite;
+                    //                }
+                    //                .test2 {
+                    //                    -vendor-animation-duration: 3s;
+                    //                    -vendor-animation-delay: 4s;
+                    //                    -vendor-animation-iteration-count: infinite;
+                    //                }
+                }
+            }

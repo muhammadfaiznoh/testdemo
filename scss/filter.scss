@@ -1,0 +1,154 @@
+$filter-panel-bg:#231F20;
+$filter-input-bg:#bdbec0;
+$filter-text-gray:#58585B;
+$filter-text-lightgray:#939597;
+$filter-text-red:#8B1C40;
+$filter-separator:#58585a;
+$filter-separator-width:1px;
+$filter-panel-border-radius:10px;
+$filter-input-border-radius:10px;
+.ionic-select-modal {
+    .item {
+        i {
+            float: right;
+            display: none;
+            color: red;
+        }
+        &.option-selected {
+            i {
+                display: block;
+            }
+        }
+    }
+}
+
+.filter {
+    * {
+        //border:solid 1px red;
+        //box-sizing: border-box;
+    }
+    .filter-panel {
+        max-width: 530px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px;
+        background-image: -webkit-gradient(linear, 0% top, 100% top, from($pink-deep), to($pink-light)); // Safari 4+, Chrome 2+
+        background-image: -webkit-linear-gradient(left, color-stop($pink-deep 100%), color-stop($pink-light 100%)); // Safari 5.1+, Chrome 10+
+        background-image: -moz-linear-gradient(left, $pink-deep 100%, $pink-light 100%); // FF 3.6+
+        background-image: linear-gradient(to right, $pink-deep 0%, $pink-light 100%); // Standard, IE10
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($pink-deep)}', endColorstr='#{ie-hex-str($pink-light)}', GradientType=1); // IE9 and down
+        @include border-radius($filter-panel-border-radius);
+        border: solid 1px $filter-input-bg;
+    }
+    .filter-group {
+        margin-bottom: 12px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        .filter-input {
+            &[disabled] {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+            padding: 16px;
+            background-color: $filter-input-bg;
+            @include border-radius($filter-input-border-radius);
+            border-width: 0;
+            color: $filter-text-gray;
+            .filter-select-more {
+                font-size: 12px;
+                display: block;
+                line-height: 100%;
+            }
+            &.filter-select {
+                font-size: 24px;
+                width: 100%;
+            }
+            &.filter-date-from-to,
+            &.filter-period-month-year {
+                ionic-datepicker {}
+                .filter-title {
+                    text-align: center;
+                    font-size: 18px;
+                }
+                .horizontal-separator {
+                    width: 100%;
+                    height: $filter-separator-width;
+                    background-color: $filter-separator;
+                    margin-top: 4px;
+                    margin-bottom: 10px;
+                }
+                .vertical-separator {
+                    @include flex(1, 1, auto);
+                    width: $filter-separator-width;
+                    background-color: $filter-separator;
+                    margin-left: 9px;
+                    margin-right: 9px;
+                }
+                .from-to {
+                    @include display-flex();
+                    @include flex-direction(row);
+                    @include justify-content(center);
+                }
+                .to-input,
+                .from-input {
+                    @include flex(1, 1, 100%);
+                    text-align: center;
+                    @include display-flex();
+                    @include flex-direction(row);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    min-height: 52px;
+                    .unspecific {
+                        text-align: center;
+                        font-size: 30px;
+                    }
+                    .day {
+                        color: $filter-text-red;
+                        @include flex(1, 1, 100%);
+                        font-size: 52px;
+                        line-height: 100%;
+                    }
+                    .month-year {
+                        @include flex(1, 1, 100%);
+                        font-size: 26px;
+                        line-height: 100%;
+                    }
+                    .month {
+                        color: $filter-text-gray;
+                    }
+                    .year {
+                        color: $filter-text-lightgray;
+                        font-size: 23px;
+                        line-height: 100%;
+                    }
+                }
+            }
+            &.filter-period-month-year {
+                .to-input,
+                .from-input {
+                    .day {
+                        @include flex(0, 1, auto);
+                        font-size: 48px;
+                        line-height: 100%;
+                        //max-width:120px;
+                    }
+                    .month {
+                        @include flex(0, 1, auto);
+                        font-size: 48px;
+                        line-height: 100%;
+                        //max-width:120px;
+                    }
+                    .year {
+                        @include flex(0, 1, auto);
+                        font-size: 48px;
+                        line-height: 100%;
+                        padding-right: 10px;
+                        //max-width:120px;
+                    }
+                }
+            }
+        }
+    }
+}
