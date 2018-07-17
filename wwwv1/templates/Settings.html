@@ -1,0 +1,65 @@
+<ion-view id="setting">
+    <ion-content scroll="true">
+
+        <div class="matde">
+            <ion-item class="text-center" style="border:none">
+                <div class="overlay" ng-click="edit_profile()">
+                    <img id="profile-image" data-ng-src="data:image/jpeg;base64,{{up_image}}" ng-if="up_image !== null">
+                    <img id="profile-image" ng-src="img/no_profile_image.png" ng-if="up_image === null">
+                    <a><img class="img-shadow" src="img/edit-button.png" width="40px" height="auto" ng-click="edit_profile()"></a>
+                </div>
+                <h3 id="profile-description">{{up_name}}</h3>
+                <h5 id="email-description">{{up_email}}</h5>
+
+            </ion-item>
+
+            <ion-list class="list animate-fade-slide-in-right">
+<!--
+                <div class="border-setting zeromargin list-color" ion-ripple item-type="item-icon-left" ng-click="actionLang()">
+
+                <div class="item range list-color">
+                    <i class="icon ion-volume-low"></i>
+                    <input type="range" name="volume">
+                    <i class="icon ion-volume-high"></i>
+                </div>
+                </div>
+-->
+                <!--
+                <ion-item item-type="item-icon-left" ng-click="">
+                    <i class="icon ion-volume-medium"></i><span> SOUND</span>
+                </ion-item>
+-->
+
+
+                </ion-item>
+<!--
+                <div class="border-setting zeromargin list-color" ion-ripple item-type="item-icon-left" ng-click="actionLang()">
+                    <i class="icon ion-ios-chatbubble"></i><span> LANGUAGE</span>
+                </div>
+-->
+                <!--
+                <ion-item item-type="item-icon-left" ng-click="actionProfile()">
+                    <i class="icon ion-unlocked"></i><span> ACCOUNT &amp; LOGIN</span>
+                </ion-item>
+-->
+                <div class="border-setting zeromargin list-color" item-type="item-icon-left" ng-click="actionabout()">
+                    <i class="icon ion-ios-briefcase"></i><span><span> ABOUT</span>
+                </div>
+                <div class="border-setting zeromargin list-color" item-type="item-icon-left" ng-click="actionGuide()">
+                    <i class="icon ion-ios-book"></i><span><span> USER GUIDE</span>
+                </div>
+                <div class="border-setting zeromargin list-color" item-type="item-icon-left" modal="device_os" ng-if="device_os === 'android'" 
+                     onclick="window.open('https://play.google.com/store/apps/details?id=com.itisdbkl.edrive', '_system', 'location=yes'); return false;">
+                    <i class="icon ion-ios-star"></i><span><span> RATE US</span>
+                </div>
+                <div class="border-setting zeromargin list-color" item-type="item-icon-left" modal="device_os" ng-if="device_os === 'ios'" 
+                     onclick="window.open('https://appsto.re/my/FKcngb.i', '_system', 'location=yes'); return false;">
+                    <i class="icon ion-ios-star"></i><span><span> RATE US</span>
+                </div>
+                <div ng-if="staff === true || staff===false" class="border-setting zeromargin list-color" item-type="item-icon-left" ng-click="actionLogout()" >
+                    <i class="icon ion-log-out"></i><span><span> SIGN OUT</span>
+                </div>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

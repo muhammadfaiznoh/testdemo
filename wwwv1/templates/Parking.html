@@ -1,0 +1,51 @@
+<ion-view id="parking">
+    <ion-pane>
+        <ion-content  class="has-header" on-scroll="getScrollPosition()" delegate-handle="ScrollToBot">
+            <ion-refresher on-refresh="onRefresh()">
+
+            </ion-refresher>
+            <div class="row" style="padding:0; font-size:1.3em">
+                <div class="col col-50">
+                    <div style="margin-left:16px; color:#000" class="color-font"><strong>Location</strong></div>
+                </div>
+                <div style="color:#000" class="col col-50">
+                    <strong>Parking Bay</strong>
+                </div>
+            </div>
+            <ion-list class="listdir">
+                <ion-item class="border-color-transparent padding-xxs" item-width="100%" ng-repeat="item in items" item-height="!item.isSummary?125:145">
+                    <div class="director-sales-item">
+                        <div class="project">
+                            <div class="branch">
+                                <img ng-src="{{parkimg[$index]}}" width="100%">
+                            </div>
+                        </div>
+                        <div class="detail ">
+                            <div class="count-percent">
+                                <div class="count">
+                                    <div class="label" style="color: white;">{{item.avail_space}}</div>
+
+                                </div>
+                                <div class="percent">
+                                    <div>
+                                        <a ng-click="actionDirections($index)" class="button button-clear btn-footer"><i class="icon ion-navigate" style="font-size: 100px; color:#fff"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+            <div style="height:100px;">
+            </div>
+        </ion-content>
+        <div class="float-button" ng-show="sttButton" ng-click="goBottom()">
+	<span class="height-fix">
+	  	<a class="content" >
+	    	<i class="ion-ios-arrow-down"> </i>
+	   	</a>
+	  </span>
+</div>
+    </ion-pane>
+</ion-view>

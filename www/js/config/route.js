@@ -8,8 +8,8 @@
                 url: '/home',
                 cache: false,
            
-                views: {
-                    'main': {
+                // views: {
+                //     'main': {
                         templateUrl: 'templates/login.html',
                         controller: 'LoginCtrl'        
 //                        templateUrl: 'templates/tabs.html',
@@ -17,9 +17,9 @@
 //                        templateUrl: 'templates/loginno.html',
 //                        controller: 'LoginNoCtrl'
                         
-                            }
+                        //     }
                     
-                        }
+                        // }
             })
 
             
@@ -28,12 +28,12 @@
                 //cache: true,
                 abstract: true,
 //            templateUrl: "templates/tabs.html"
-                views: {
-                    'main': {
+                // views: {
+                //     'main': {
                         templateUrl: 'templates/menu.html',
-                        controller: 'TabsCtrl'
-                    }
-                }
+                        controller: 'AppCtrl'
+                //     }
+                // }
             })
         
 
@@ -41,7 +41,7 @@
                 url: '/mapmain',
                 cache: true,
                 views: {
-                    'MapMain': {
+                    'main': {
                         templateUrl: 'templates/MapMain.html',
                         controller: 'MapMainCtrl'
                     }
@@ -53,12 +53,12 @@
       .state('login', {
                 url: '/login',
                 cache: true,
-                views: {
-                    'main': {
+                // views: {
+                //     'main': {
                         templateUrl: 'templates/login.html',
                         controller: 'LoginCtrl' 
-                    }
-                }
+                //     }
+                // }
             })
             
             .state('verify', {
@@ -110,7 +110,7 @@
                 url: '/reporttype',
                 cache: true,
                 views: {
-                    'ReportGrid': {
+                    'main': {
                         templateUrl: 'templates/ReportGrid.html',
                         controller: 'ReportGridCtrl'
                     }
@@ -120,7 +120,7 @@
                 url: '/report',
                 cache: true,
                 views: {
-                    'ReportGrid': {
+                    'main': {
                         templateUrl: 'templates/Report.html',
                         controller: 'ReportCtrl'
                     }
@@ -144,7 +144,7 @@
                 url: '/ert',
                 cache: true,
                 views: {
-                    'ERT': {
+                    'main': {
                         templateUrl: 'templates/ERTInfo.html',
                         controller: 'ERTInfoCtrl'
                     }
@@ -154,7 +154,7 @@
                 url: '/lighthouse',
                 cache: true,
                 views: {
-                    'LightHouse': {
+                    'main': {
                         templateUrl: 'templates/LightHouse.html',
                         controller: 'LightHouseCtrl'
                     }
@@ -164,7 +164,7 @@
                 url: '/ert_report',
                 cache: true,
                 views: {
-                    'ERT': {
+                    'main': {
                         templateUrl: 'templates/ERTReport.html',
                         controller: 'ERTReportCtrl'
                     }
@@ -173,7 +173,7 @@
             .state('tab.ert_details', {
                 url: '/ert_details',
                 views: {
-                    'ERT': {
+                    'main': {
                         templateUrl: 'templates/ERTDetails.html',
                         controller: 'ERTDetailsCtrl'
                     }
@@ -182,7 +182,7 @@
             .state('tab.ert_form', {
                 url: '/ert_form',
                 views: {
-                    'ERT': {
+                    'main': {
                         templateUrl: 'templates/ERTForm.html',
                         controller: 'ERTFormCtrl'
                     }
@@ -191,7 +191,7 @@
             .state('tab.cameralist', {
                 url: '/cameralist',
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/CameraList.html',
                         controller: 'CameraListCtrl'
                     }
@@ -200,7 +200,7 @@
             .state('tab.cctv', {
                 url: '/cctv',
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/CCTVPic.html',
                         controller: 'CCTVPicCtrl'
                     }
@@ -211,7 +211,7 @@
                 url: '/setting',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/Settings.html',
                         controller: 'SettingCtrl'
                     }
@@ -221,7 +221,7 @@
                 url: '/about',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/about.html',
                         controller: 'aboutCtrl'
                     }
@@ -231,7 +231,7 @@
                 url: '/guide',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/walkthrough.html',
                         controller: 'walkthroughCtrl'
                     }
@@ -241,7 +241,7 @@
                 url: '/infoguide',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/info-guide.html',
                         controller: 'info-guideCtrl'
                     }
@@ -251,7 +251,7 @@
                 url: '/infoguide',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/CctvGuide.html',
                         controller: 'cctvGuideCtrl'
                     }
@@ -261,7 +261,7 @@
                 url: '/profile',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/SubPage/Profile.html',
                         controller: 'ProfileCtrl'
                     }
@@ -270,7 +270,7 @@
             .state('tab.changepassword', {
                 url: '/changepassword',
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/SubPage/ChangePassword.html',
                         controller: 'ChangePasswordCtrl'
                     }
@@ -280,7 +280,7 @@
                 url: '/highlight',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/Highlight.html',
                         controller: 'HighlightCtrl'
                     }
@@ -290,7 +290,7 @@
                 url: '/event',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/Event.html',
                         controller: 'EventCtrl'
                     }
@@ -300,7 +300,7 @@
                 url: '/infodbkl',
                 cache: true,
                 views: {
-                    'Drawer' : {
+                    'main' : {
                         templateUrl: 'templates/InfoDBKL.html',
                         controller: 'InfoDBKLCtrl'
                     }
@@ -310,7 +310,7 @@
                 url: '/traffic',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/InfoTraffic.html',
                         controller: 'TrafficCtrl'
                     }
@@ -320,7 +320,7 @@
                 url: '/parking',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/Parking.html',
                         controller: 'ParkingCtrl'
                     }
@@ -331,7 +331,7 @@
                 url: '/vms',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/VMS.html',
                         controller: 'VMSCtrl'
                     }
@@ -342,7 +342,7 @@
                 url: '/vmsview',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/VMSView.html',
                         controller: 'VMSViewCtrl'
                     }
@@ -353,7 +353,7 @@
                 url: '/vmsdetails',
                 cache: true,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/VMSDetails.html',
                         controller: 'VMSDetailsCtrl'
                     }
@@ -364,7 +364,7 @@
                 url: '/sleepmode',
                 cache: false,
                 views: {
-                    'Drawer': {
+                    'main': {
                         templateUrl: 'templates/SleepMode.html',
                         controller: 'SleepmodeCtrl'
                     }
@@ -375,7 +375,7 @@
                 url: '/directions',
                 cache: false,
                 views: {
-                    'SearchPlace': {
+                    'main': {
                         templateUrl: 'templates/Directions.html',
                         controller: 'DirectionsCtrl'
                     }

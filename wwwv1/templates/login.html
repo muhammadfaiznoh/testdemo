@@ -1,0 +1,51 @@
+<ion-view hide-nav-bar="true" id="login" class="deepblue-theme">
+    
+        
+        <div class="top-content">
+            <div class="top-content-item">
+
+                <!-- <img id="logo" src="img/bg.jpg" width="100%" height="100%" style="position:absolute;"> -->
+                <img ng-click="download()" class="animated headShake top-logo" id="logo" src="img/ionic.png" width="30%" height="auto" style="margin-top:5%; margin-left: 32%; position: relative;">
+            </div>
+        </div>
+        
+        <!-- <div class="form-title text-center" style="margin:0; margin-top:14%"><strong>WELCOME</strong></div>
+        <div class="sub-title text-center">Please login to get access</div> -->
+        <form ng-submit="" class="" novalidate name="loginForm">
+            <div class="row">
+                <div class="col col-90 list list-inset img-centered " style="margin-top:0;">
+                    <label class="item item-input " >
+                        <input type="email" placeholder="Enter email" ng-model="loginData.email">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col col-90 list list-inset img-centered " style="margin-top : 5px">
+                    <label class="item item-input " >
+                        <input type="password" placeholder="Enter password" ng-model="loginData.password">
+                    </label>
+                </div>
+            </div>
+            <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+                <button class="button button-large button-positive button-block" style="width:100%; line-height:10px" ng-click="actionSubmit(false)">
+                    LOGIN
+                </button>
+            </div>
+            <div class="row" style="margin-top: 5px">
+                <div class="forgot-text col " style="text-align:center;"><a ng-click="actionForgot()">Forgot your password?</a></div>
+            </div>
+            <!-- <div class="section-separator" style="margin-left:auto; margin-right:auto"></div> -->
+            <!-- <div class="row" style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+                <button class="col col-90 button dev-button img-centered" style="width:100%; line-height:10px" ng-click="actionCreate()">
+                    CREATE NEW ACCOUNT
+                </button>
+                <br />
+            </div> -->
+     
+          
+
+
+        </form>
+    
+</ion-view>

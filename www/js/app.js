@@ -104,7 +104,7 @@ angular.module('eDrive', [
                 }
             }, false);
         });
-
+        $rootScope.isMenuOpen = $ionicSideMenuDelegate.isOpen.bind($ionicSideMenuDelegate);
 
 
 

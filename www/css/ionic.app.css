@@ -20911,6 +20911,12 @@ ion-side-menus .item {
     color: #ffffff; }
     .deepblue-theme h1, .deepblue-theme h2, .deepblue-theme h3, .deepblue-theme h4, .deepblue-theme h5, .deepblue-theme h6, .deepblue-theme .h1, .deepblue-theme .h2, .deepblue-theme .h3, .deepblue-theme .h4, .deepblue-theme .h5, .deepblue-theme .h6 {
       color: #ffffff; }
+      .deepblue-theme .pane, .deepblue-theme .view {
+        background: -webkit-linear-gradient(90deg, #00c6ff 10%, #0072ff 90%);
+        background: -moz-linear-gradient(90deg, #00c6ff 10%, #0072ff 90%);
+        background: -ms-linear-gradient(90deg, #00c6ff 10%, #0072ff 90%);
+        background: -o-linear-gradient(90deg, #00c6ff 10%, #0072ff 90%);
+        background: linear-gradient(90deg, #00c6ff 10%, #0072ff 90%); }
    
     .deepblue-theme .menu {
       background: -webkit-linear-gradient(90deg, #0072ff 10%, #00c6ff 90%);

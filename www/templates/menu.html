@@ -1,21 +1,9 @@
 <!-- 
-  #IMPLEMENTATION-DETAIL:
-  this view is our top one and uses ion-side-menus component.
-  In case of views where we want to hide the menu, we'll hide the 
-  navigation bar provided here.
-  #TIP: enable-menu-with-back-views="true" is set to true to show the menu opening control in all views by default.
--->
 <ion-side-menus enable-menu-with-back-views="true">
   
   <ion-side-menu-content>
     <ion-nav-bar class="bar-deepblue">
-      <!-- #TIP: <ion-nav-back-button> is commented out in this example,
-        uncomment if you need a back button in some views.
-      -->
-      <!--
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-      -->
+  
       <ion-nav-buttons side="left" >
         <button class="white-color button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -27,20 +15,13 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <!--
-      #IMPLEMENTATION-DETAIL:
-      we are using our custom bar classes here
-      see scss/themed.scss for implementation.
-    -->
+
     <ion-header-bar class="bar-deepblue-reverse bar-deepblue-borderbottom">
     </ion-header-bar>
   
     <ion-content>
       <ion-list>
-        <!-- #TIP: 
-          Menu items are wrapped In the following <ion-list>. 
-          Each one has attribute "menu-close" set in order to automatically close side menu on click 
-        -->
+  
         <ion-item ng-show="user.avatar" menu-close href="#/app/account" class="item-menu-avatar text-center">
           <img ng-src="{{user.avatar}}" class="avatar-menu">
         </ion-item>
@@ -59,14 +40,65 @@
       
     </ion-content>
     
-    <!-- 
-      #IMPLEMENTATION-DETAIL:
-      we choose to put a "logout" button in the footer of side menu.
-      the "logout" method in contained in "AppCtrl" controller (see controllers.js)
-    -->
+
     <ion-footer-bar class="bar-positive">
       <button class="button button-clear white-color" ng-click="logout()" menu-close>Logout</button>
     </ion-footer-bar>
   
   </ion-side-menu>
-</ion-side-menus>
+</ion-side-menus> -->
+
+<ion-side-menus enable-menu-with-back-views="false" state="closed" delegate-handle="menuDrawer">
+    <ion-side-menu-content>
+      <ion-nav-bar class="bar-deepblue">
+          <ion-nav-back-button>
+            </ion-nav-back-button>
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+          </button>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+      <ion-nav-view name="main"></ion-nav-view>
+    </ion-side-menu-content>
+  
+    <ion-side-menu side="left" class="main-menu" expose-aside-when="large"  ng-hide="hide_menu">
+      <ion-content>
+        <ion-list>
+  
+          <!-- Menu -->
+          <div class="bar bar-header " style=" background-color: transparent;">
+            <!-- Left -->
+            <button class="button button-icon icon ion-gear-a"></button>
+          </div>
+  
+          <!-- Avatar -->
+          <ion-item class="heading-item item item-avatar" nav-clear menu-close ui-sref="app.profile">
+            <div class="user-image-container">
+              <img class="user-image" ng-src="https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg" spinner-on-load>
+            </div>
+            <h2 class="greeting">John Doe</h2>
+          </ion-item>
+  
+          <!-- Actions -->
+          <ion-item class="item-icon-left" nav-clear menu-close ui-sref="tab.lighthouse">
+              <i class="icon ion-location"></i>
+              <h2 class="menu-text">Lighthouse</h2>
+            </ion-item>
+          <ion-item class="item-icon-left" nav-clear menu-close ui-sref="tab.mapmain">
+            <i class="icon ion-map"></i>
+            <h2 class="menu-text">Map</h2>
+          </ion-item>
+          <ion-item class="item-icon-left" nav-clear menu-close ui-sref="tab.ert">
+            <i class="icon ion-settings"></i>
+            <h2 class="menu-text">Report</h2>
+          </ion-item>
+          
+        </ion-list>
+      </ion-content>
+      <ion-footer-bar class="bar-positive">
+          <button class="button button-clear white-color" ng-click="actionLogout()" menu-close> <i class="icon ion-log-out"></i>Logout</button>
+        </ion-footer-bar>
+ 
+      
+    </ion-side-menus>
+  

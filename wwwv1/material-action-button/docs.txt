@@ -1,0 +1,75 @@
+The $actionButton removes itself from the DOM when the view changes.
+
+Create one:
+
+$actionButton.create(options);
+
+The example bellow shows all the options but
+
+options.removeOnStateChange
+
+If set to false, the element won't be removed from the dom automatically after view change.
+
+It also provides a simple API:
+
+show() - Shows the button. Return promise.
+
+hide() - Hides the button. Return promise.
+
+visible() - Return boolean. True if visible, false if not.
+
+.controller('exmapleCtrl', function($scope, $actionButton) {
+
+
+  //you create a new action button.
+  var actionButton = $actionButton.create({
+    mainAction: {
+      icon: 'ion-android-create',//Uses ionicons icons.
+      backgroundColor: 'blue',
+      textColor: ' white',
+      onClick: function() {
+        console.log('clicked main BUTTON');
+      }
+    },
+    buttons: [{
+      //if this array is empty or the buttons key non existant
+      //there will be no secondary actions.
+      //If there are secondary actions, the main action is overwritten to show
+      //the open and close sub menu
+
+
+      //shows pin icons with a 'find' label
+
+      icon: 'ion-android-pin',
+      label: 'Find',
+      backgroundColor: 'red',
+      iconColor: 'white',
+      onClick: function() {
+        console.log('clicked pin');
+      }
+    }, {
+      //shows a label and icon defaults to first letter of label
+      label: 'Ben Sparrow',
+      onClick: function() {
+        console.log('clicked O');
+      }
+    }, {
+      //shows a label and icon is the letter configured
+      label: 'Max Lynx',
+      letter: 'O'
+      onClick: function() {
+        console.log('clicked Testing');
+      }
+    }]
+  });
+
+  actionButton.hide()
+  .then(function () {
+    console.log('Do something after hide');
+  });
+
+  actionButton.show()
+  .then(function () {
+    console.log('Do something after show');
+  });
+})

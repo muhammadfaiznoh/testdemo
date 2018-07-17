@@ -1,0 +1,32 @@
+<ion-view id="cctvview">
+    
+    <ion-content  on-scroll="getScrollPosition()" delegate-handle="ScrollToBot">
+
+        <ion-refresher on-refresh="onRefresh()">
+
+        </ion-refresher>
+
+        <ion-list class="listdir">
+            <ion-item class="padding-xxs item-icon-right" ng-repeat="item in datafilter" item-width="100%" item-height="!item.isSummary?130:145" ng-click="showImages($index)" ng-if="!nodata">
+                <div class="spacing" style="white-space: normal;">
+                    <div class="item-thumbnail-left">
+                        <img class="img-sizes" src="{{item.url}}">
+                        <div class="item-thumb-content"><strong>{{item.location}}</strong>
+                            <div><small>{{date}}</small></div>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item ng-if="nodata" class="nodata">No data are found</ion-item>
+        </ion-list>
+        <div style="height:100px;">
+        </div>
+    </ion-content>
+      <div class="float-button" ng-show="sttButton" ng-click="goBottom()">
+	<span class="height-fix">
+	  	<a class="content" >
+	    	<i class="ion-ios-arrow-down"> </i>
+	   	</a>
+	  </span>
+</div>
+</ion-view>
