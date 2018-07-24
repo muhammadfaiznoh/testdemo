@@ -1,0 +1,69 @@
+<ion-view id="Event">
+
+    <ion-content padding="true">
+        <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+        <div class="text-center">
+            <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+        </div>
+        <div ng-show="!loading">
+            <div class="text-center">
+                    <img ng-if="data.type !== '10'" class="back-color" src="{{images[data.type-1]}}" style="width:auto; margin-top:0; margin-left: 15px;">
+                    <img ng-if="data.type === '10'" class="back-color" src="http://58.26.9.230/edrive_new/{{data.imageurl}}" style="width:80%;height:auto; margin-top:0; margin-left: 15px;">
+            </div>
+            <br>
+            <div class="text-center padding-xxs">
+                <h4 style="color:white">
+                    <strong>{{data.url}}</strong>
+                </h4>
+            </div>
+            <br>
+          
+             <!-- <ion-list>
+                <ion-item class="item-divider item-icon-right"><b>Details</b> <i class="icon ion-bookmark"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content" style="text-align: justify;">{{data.content}}</h3>
+                </ion-item>
+            </ion-list>
+            <br> -->
+            <ion-list ng-if="data.type === '10'">
+                <ion-item class="item-divider item-icon-right"><b>Start Date</b> <i class="icon ion-clock"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content" style="text-align: justify;">{{data.start_date}} {{data.start_time}}</h3>
+                </ion-item>
+            </ion-list>
+            <br>
+            <ion-list ng-if="data.type === '10'">
+                <ion-item class="item-divider item-icon-right"><b>End Date</b> <i class="icon ion-clock"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content" style="text-align: justify;">{{data.end_date}} {{data.end_time}}</h3>
+                </ion-item>
+            </ion-list>
+            <br>
+            <ion-list>
+                <ion-item class="item-divider item-icon-right"><b>Location</b> <i class="icon ion-location"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content">{{data.location}}</h3>
+                </ion-item>
+            </ion-list>
+              <ion-list ng-if="data.type === '10'">
+                <ion-item class="item-divider item-icon-right"><b>Details</b> <i class="icon ion-clipboard"></i></ion-item>
+                <ion-item  id="txtnotes" class="item-content">
+                    <div class=" line-breaker" style="text-align: justify; font-size: 14px; ">{{data.zone}}</div>
+                </ion-item>
+            </ion-list>
+            <br>
+        </div>
+        <div style="height:100px;">
+
+        </div>
+        
+    </ion-content>
+     <div class="float-button">
+	<span class="height-fix">
+	  	<a class="content" ng-click="goBottom()">
+	    	<i class="ion-ios-arrow-down"> </i>
+	   	</a>
+	  </span>
+</div>
+
+</ion-view>

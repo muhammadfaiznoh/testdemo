@@ -1,0 +1,45 @@
+<ion-view id="report">
+    <ion-nav-buttons side="right">
+        <!--
+        <button class="button button-clear" ng-click="popoverReport.show($event)"  >
+            <i class="fa fa-pencil-square-o" aria-hidden="true" style="font-size: 30px;"></i>
+        </button>
+-->
+    </ion-nav-buttons>
+    <ion-content scroll="true">
+
+        <div class="report-column">
+            <div class=" top-content" style="text-align:center">
+                <img class=" margin-horizontal-xxlg text-center" ng-click="addMedia()" ng-if="imgURI !== undefined" ng-src="data:image/jpeg;base64,{{imgURI}}" width="20%" height="20%" style="margin-top:20%">
+                <img class=" margin-horizontal-xxlg text-center" ng-click="addMedia()" ng-if="imgURI === undefined" ng-src="img/cmera_icon.png" width="20%" height="auto" style="margin-top:20%">
+            </div>
+
+        </div>
+        <div class="hr-column">
+            <hr style="width:90%; border-bottom: 2px solid black;">
+        </div>
+        <div class="report-column1 item-paddings">
+
+            <div class="row">
+                <div class="col col-33"><img class="float-left" ng-src="{{type}}" width="75%" height="auto"></div>
+                <div class="column-text-style col col-67">{{text}}</div>
+            </div>
+        </div>
+        <div class="hr-column">
+            <hr style="width:90%;border-bottom: 2px solid black;">
+        </div>
+        <div class="report-column2">
+      
+            <label class="item item-input" style="padding:0; border-radius:5px; margin:5%; border:none">
+                <textarea ng-model="report.message" style="padding-left: 5px; height:140px; background:transparent" placeholder="Type your message here"></textarea>
+            </label>
+
+            <div class="row" style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+                <button class="col button dev-button" style="width:100%; line-height:10px" ng-click="actionSubmit(report.message)">
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

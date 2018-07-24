@@ -1,0 +1,113 @@
+<ion-view id="verify" hide-nav-bar="true" hide-back-button="true">
+    <ion-content>
+        <div class="top-content">
+            <div class="top-content-item">
+                <img id="logo" src="img/headerbg.png" width="100%" height="auto" style="position:absolute;">
+                <img ng-click="download()" class="animated headShake top-logo" id="logo" src="img/header_logo.png" width="40%" height="auto" style="margin-top:5%; margin-left: 32%; position: relative;">
+            </div>
+        </div>
+        <form ng-submit="" class="" novalidate name="verifyForm" style="margin-top:30%">
+<!--
+            <div class="constant-color-black" style="white-space:normal;"><small>
+                    *SMS with verification code will be send to your number.</small>
+            </div>
+-->
+            <!--
+            <ion-item>
+                <div class="constant-color-black" style="white-space:normal;"><small>
+                    *SMS with verification code will be send to your number.</small>
+                </div>
+            </ion-item>
+-->
+            <!--
+            <ion-item>
+
+                <ion-input type="tel" placeholder="Tel Input"></ion-input>
+            </ion-item>
+-->
+            <div>
+                <div class="row constant-color-black" style="margin-top:10%; text-align: center">
+                    <div class="col col-10" style="margin-left:auto; border-bottom: 2px solid black; font-size:35px">
+                        <strong> {{passcode.substring(0, 1)}}</strong>
+                    </div>
+                    <div class="col col-10 col-offset-10" style="border-bottom: 2px solid black; font-size:35px">
+                        <strong>{{passcode.substring(1, 2)}}</strong>
+                    </div>
+                    <div class="col col-10 col-offset-10" style="border-bottom: 2px solid black; font-size:35px">
+                        <strong>{{passcode.substring(2, 3)}}</strong>
+                    </div>
+                    <div class="col col-10 col-offset-10" style="border-bottom: 2px solid black; font-size:35px">
+                        <strong>{{passcode.substring(3, 4)}}</strong>
+                    </div>
+                    <div class="col col-10 col-offset-10" style="margin-right: auto; border-bottom: 2px solid black; font-size:35px">
+                        <strong>{{passcode.substring(4, 5)}}</strong>
+                    </div>
+
+                </div>
+            </div>
+            <div style="margin-top: 10%">
+                <div class="row">
+                    <div class="col col-25 text-center" style="margin-left:auto">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-clear button-stretch" ng-click="add(1)">1</button>
+                    </div>
+                    <div class="col col-25 text-center">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(2)">2</button>
+                    </div>
+                    <div class="col col-25 text-center" style="margin-right:auto">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(3)">3</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25 text-center col-offset-25" style="margin-left:auto">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(4)">4</button>
+                    </div>
+                    <div class="col col-25 text-center">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(5)">5</button>
+                    </div>
+                    <div class="col col-25 text-center" style="margin-right:auto">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(6)">6</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25 col-offset-25 text-center" style="margin-left:auto">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(7)">7</button>
+                    </div>
+                    <div class="col col-25 text-center">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(8)">8</button>
+                    </div>
+                    <div class="col col-25 text-center" style="margin-right:auto">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(9)">9</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25 col-offset-25 text-center" style="margin-left:auto">
+                        <button style="border: 2px solid black; color:black" class="button icon ion-arrow-left-a button-light button-clear button-stretch" ng-click="delete()"></button>
+                    </div>
+                    <div class="col col-25 text-center">
+                        <button style="border: 2px solid black; color:black" class="button button-light button-clear button-stretch" ng-click="add(0)">0</button>
+                    </div>
+                    <div class="col col-25 text-center" style="margin-right:auto">
+                        <button style="border: 2px solid black; color:black" class="button icon ion-checkmark-round button-light button-clear button-stretch" ng-click="send()"></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-top: 5px">
+                <div class="forgot-text col " style="text-align:center; margin-bottom:4%">Not getting code? <a ng-click="resend()">Resend Verification Code</a></div>
+            </div>
+
+            <div class="row" style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+                <button class="col button dev-button" style="width:100%; line-height:10px" ng-click="actionBack()">
+                    BACK
+                </button>
+            </div>
+
+        </form>
+
+
+        <div style="height:100px;">
+        </div>
+
+    </ion-content>
+</ion-view>

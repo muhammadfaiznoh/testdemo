@@ -1,0 +1,82 @@
+<ion-view id="cctv">
+    
+    <ion-content on-scroll="getScrollPosition()" delegate-handle="ScrollToBot">
+
+        <ion-refresher on-refresh="onRefresh()">
+
+        </ion-refresher>
+
+<!--
+    <div class="row button-content">
+
+                <a ng-click="actionButtonTraffic()" class="left-btn col button dev-button" style="margin-right:4px; line-height:20px; height:30px">CCTV TRAFFIC</a>
+
+
+                <a ng-click="actionButtonEvent()" class="right-btn col button dev-button" style="line-height:20px; height:30px">FLOOD CCTV</a>
+
+            </div> -->
+        <ion-list class="listdir" ng-if="traffic" >
+<!--
+            <div class="bounce">
+                <i class="fa fa-angle-double-down"></i>
+            </div>
+-->
+            <ion-item class="padding-xxs item-icon-right" ng-repeat="item in items " item-width="100%" item-height="!item.isSummary?50:145" ng-click="actionItemIndex($index)" ng-if="item.isNoData">
+                <div class="spacing">
+                    <div class="camera-item">
+                        {{item.zone}}
+
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="padding-xxs item-icon-right" ng-repeat="item in items " item-width="100%" item-height="!item.isSummary?50:145" ng-click="actionItemIndex($index)" ng-if="!item.isData">
+                <div class="spacing">
+                    <div class="camera-item">
+                        {{item.zone}}
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+        
+         <ion-list class="listdir" ng-if="!traffic">
+            <ion-item class="padding-xxs item-icon-right" ng-repeat="item in data" item-width="100%" item-height="!item.isSummary?130:145" ng-click="showImages($index)" ng-if="!nodata">
+                <div class="spacing" style="white-space: normal;">
+                    <div class="item-thumbnail-left">
+                        <img class="img-sizes" src="{{item.url}}">
+                        
+                        <div class="item-thumb-content"><strong>{{item.location}}</strong>
+                            <div><small>{{date}}</small></div>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item ng-if="nodata" class="nodata">No data are found</ion-item>
+        </ion-list>
+<!--
+        <ion-list class="listdir" ng-if="!traffic">
+                <ion-item class="padding-xxs item-icon-right" ng-repeat="item in data" item-width="100%" item-height="!item.isSummary?120:145" 
+                    ng-click="actionListInfo($index)" ng-if="item.type_event === 'info'">
+                    <div class="spacing">
+                        <div class="item-thumbnail-left" style="color:#000;">
+                            <img class="back-color" src="img/icon/infoicon.png" style="width:66.55px;height:auto;margin-top:0; margin-left: 15px;">
+                            <div class="item-thumb-content">
+                                <small>
+                                    <strong>{{item.title}}</strong>
+                                    <div style="height:4.2em;overflow:hidden;text-overflow:ellipsis;"><small>{{"Detail : " + item.description}}</small></div>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+-->
+
+    </ion-content>
+      <div class="float-button"  ng-show="sttButton" ng-click="goBottom()">
+	<span class="height-fix">
+	  	<a class="content">
+	    	<i class="ion-ios-arrow-down"> </i>
+	   	</a>
+	  </span>
+</div>
+</ion-view>

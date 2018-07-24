@@ -1,0 +1,9 @@
+<ion-view id="language">
+    <ion-content>
+        <br>
+        <br>
+        <ion-toggle ng-repeat="item in filter" ng-model="item.checked" ng-checked="item.checked">
+                {{item.text}}
+        </ion-toggle>
+    </ion-content>
+</ion-view>

@@ -196,7 +196,8 @@
                                     marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function () {
 //                                        swal({ title:park.content, imageUrl:park.url, imageSize: '200x100', timer:5000, showConfirmButton:false });
                                          $scope.PromptModal("PARKING", null,  "\r\n" +park.content+ "\r\n" + "\r\n" , park.url, null, null, "30px");
-                                    });
+                                        // marker.setVisible(false)
+                                        });
                                 });
                             }
                         });

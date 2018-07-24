@@ -1,0 +1,28 @@
+<ion-view id="vms">
+    <ion-content on-scroll="getScrollPosition()" delegate-handle="ScrollToBot">
+
+        <ion-refresher on-refresh="onRefresh()" >
+
+        </ion-refresher>
+
+        <ion-list class="listdir">
+            <ion-item class="padding-xxs item-icon-right" collection-repeat="item in items track by items.zone " item-width="100%" item-height="!item.isSummary?50:145" ng-click="actionItemIndex($index)">
+                <div class="spacing">
+                    <div class="camera-item">
+                        <div>{{item.zone}}</div>
+                        <div>{{item.location}}</div>
+
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+    <div class="float-button" ng-show="sttButton" ng-click="goBottom()">
+	<span class="height-fix">
+	  	<a class="content" >
+	    	<i class="ion-ios-arrow-down"> </i>
+	   	</a>
+	  </span>
+</div>
+</ion-view>

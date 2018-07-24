@@ -1,0 +1,32 @@
+<ion-view id="Event">
+
+    <ion-content padding="true">
+        <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+        <div class="text-center">
+            <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+        </div>
+        <div ng-show="!loading">
+
+
+            <div class="text-center">
+                <img ng-click="download()" class="ui image centered" id="logo" src="{{images || data.image}}" width="80%" height="auto">
+            </div>
+            <br>
+            <div class="text-center padding-xxs">
+                <h4 style="color:white">{{data.title}}</h4>
+            </div>
+            <br>
+            <ion-list>
+                <ion-item class="item-divider item-icon-right"><b>Details</b> <i class="icon ion-bookmark"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content" style="text-align: justify;">{{data.description}}</h3>
+                </ion-item>
+            </ion-list>
+            <br>
+        </div>
+        <div style="height:100px;">
+
+        </div>
+    </ion-content>
+
+</ion-view>

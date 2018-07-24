@@ -1,0 +1,19 @@
+<ion-view id="vms">
+    <ion-content>
+        
+
+
+        <ion-list class="listdir">
+            <ion-item class="padding-xxs" ng-repeat="item in items.vms" item-width="100%" item-height="!item.isSummary?50:145" ng-click="actionItemIndex($index)" >
+                <div class="spacing">
+                    <div class="camera-item">                
+                        <div>{{item.vms_id}}</div>
+                        <div style="white-space:normal;">{{item.location}}</div>
+                        
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

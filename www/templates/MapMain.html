@@ -1,5 +1,9 @@
 <ion-view id="mapmain" hide-back-button="true" ng-init="onMapReady()" ng-controller="MapMainCtrl">
     
+    <ion-floating-menu backdrop="true"> 
+        <ion-floating-item icon="ion-camera" click="myEvent()" text="Asset 1"></ion-floating-item>
+        <ion-floating-item icon="ion-person" click="myEvent()" text="Asset 1"></ion-floating-item>
+    </ion-floating-menu>
     <ion-content scroll="false" >
 		<!-- <img ng-src="img/map_icon/speed.png" width="30%" style="position:absolute; bottom:15px; left:10px; z-index:50; text-align:center;">
         <div class="text-center" style="font-size:2em; position: absolute; bottom: 6%; left: 11.8%;; z-index: 50; text-align: center;">{{speeds}}<br>
@@ -33,5 +37,7 @@
         }
         </script>
 -->
+
     </ion-content>
+    
 </ion-view>

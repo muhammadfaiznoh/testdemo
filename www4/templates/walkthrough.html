@@ -1,0 +1,240 @@
+<!--
+<ion-view id="walkthrough" hide-nav-bar="false">
+    <ion-content>
+-->
+<!--       Implements HTML here-->
+
+<!--        <img class="walkthroughbackground" ng-src="img/sleepmode1.png" width="100%" height="auto"> -->
+
+
+
+<!--<body ng-app="ionicApp">-->
+
+<!-- <ion-nav-bar class="bar-light">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>-->
+
+<!-- <ion-nav-view></ion-nav-view>-->
+
+
+<!--<script id="templates/intro.html" type="text/ng-template">-->
+
+
+
+
+
+<ion-view id="walkthrough" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <button class="button button-positive button-clear no-animation" ng-click="skipintro()" ng-show="!slideIndex">
+            Skip Intro
+        </button>
+        <button class="button button-positive button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
+            Previous Slide
+        </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-positive button-clear no-animation" ng-click="next()" ng-show="slideIndex != 7">
+            Next
+        </button>
+        <button class="button  button-positive button-clear no-animation" ng-click="startApp()" ng-show="slideIndex == 7">
+            Start using MyApp
+        </button>
+    </ion-nav-buttons>
+
+    <ion-slide-box on-slide-changed="slideChanged(index)">
+        <ion-slide>
+            <h3 class="a1">Thank you for choosing the <br> eDrive Apps!</h3>
+            <div id="logo">
+                <img id="imgWalk1" ng-src="img/logo-walkthrouh.png" width="65%" height="auto">
+                <!--<img src="http://code.ionicframework.com/assets/img/app_icon.png">-->
+            </div>
+            <div id="koko">
+                <p>
+                    Your One-Stop Communication Platform
+                </p>
+                <p>
+                    between the public and ITIS DBKL.
+                </p>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <h3 class="a1">eDrive Application Info</h3>
+
+            <div id="list">
+                <div id="koko1">
+                    <p>
+                        eDrive is your intelligent mobile application designed
+                    </p>
+                    <p>
+                        to assist you with your journey planning in Kuala Lumpur
+                    </p>
+                    <p>
+                        areas via effective two way communication between you 
+                    </p>
+                    <p>
+                        and ITIS DBKL.
+                    </p>
+                    </br>
+                    <p>
+                        eDrive disseminates traffic congestion and incidents information
+                    </p>
+                    <p>
+                        collected to keep the road users informed and alert.
+                    </p>
+                    <p>
+                        On top of that, eDrive’s two way communication utilizes text
+                    </p>
+                    <p>
+                        and image for convenience. This allows you to report traffic
+                    </p>
+                    <p>
+                        related cases for rectification and action.
+                    </p>
+                        </br>
+                    <p>
+                        Other features also includes parking space information,
+                    </p>
+                    <p>
+                        traffic CCTV views, VMS Message Boards views and DBKL
+                    </p>
+                    <p>
+                        Engagements information.
+                    </p>
+                        </br>
+                    <p>
+                        <b><dfn>Disclaimer: eDrive’s coverage is only restricted to</dfn></b>
+                    </p>
+                    <p>
+                        <b><dfn>Kuala Lumpur, Malaysia.</dfn></b>
+                    </p>
+                </div>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <h3 class="a1">HOME SCREEN</h3>
+
+            <div id="list">
+                <img id="imgWalk2" ng-src="img/home-screen.png" width="35%" height="auto">
+                <div id="koko1">
+                    <p>
+                        The home screen locates 5km radius activity
+                    </p>
+                    <p>
+                        from your current location. Everything
+                    </p>
+                    <p>
+                        is added in real time.
+                    </p>
+                </div>
+            </div>
+        </ion-slide>
+
+        
+
+        <ion-slide>
+            <h3 class="a1">HIGHLIGHT</h3>
+
+            <div id="list">
+                <img id="imgWalk2" ng-src="img/highlight-screen.png" width="35%" height="auto">
+                <div id="koko1">
+                    <p>
+                        The highlight page will describe new update
+                    </p>
+                    <p>
+                        information on "INFO TRAFFIC" and "INFO DBKL"
+                    </p>
+                </div>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <h3 class="a1">CCTV VIEW</h3>
+
+            <div id="list">
+                <img id="imgWalk3" ng-src="img/cctv-screen.png" width="76%" height="auto">
+                <div id="koko1">
+                    <p>
+                        Show ITIS CCTV location and images on
+                    </p>
+                    <p>
+                        map view and list view. Refresh rate
+                    </p>
+                    <p>
+                        less than 1 minute.
+                     </p>
+                </div>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <h3 class="a1">VARIABLE MESSAGE SYSTEM (VMS)</h3>
+
+            <div id="list">
+                <img id="imgWalk3" ng-src="img/vms-screen.png" width="76%" height="auto">
+                <div id="koko1">
+                    <p>
+                        Show VMS location and contents on
+                    </p>
+                    <p>
+                        map view and list view. Refresh rate
+                    </p>
+                    <p>
+                        in 1 minute
+                    </p>
+                </div>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <h3 class="a1">PARKING</h3>
+
+            <div id="list">
+                <img id="imgWalk2" ng-src="img/parking-screen.png" width="35%" height="auto">
+                <div id="koko1">
+                    <p>
+                        Parking information provided location
+                    </p>
+                    <p>
+                        and availability of the
+                    </p>
+                    <p>
+                        car park spaces.
+                    </p>
+                </div>
+            </div>
+        </ion-slide>
+
+        <ion-slide>
+            <h3 class="a1">INCIDENT REPORT</h3>
+
+            <div id="list">
+                <img id="imgWalk3" ng-src="img/incident-report-screen.png" width="76%" height="auto">
+                <div id="koko1">
+                    <p>
+                        Make an incident report to update
+                    </p>
+                    <p>
+                        road condition.
+                    </p>
+                </div>
+            </div>
+        </ion-slide>
+
+
+
+    </ion-slide-box>
+</ion-view>
+<!--</script>-->
+
+<!-- </body>-->
+
+
+<!--
+
+    </ion-content>
+
+</ion-view>-->

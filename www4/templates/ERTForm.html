@@ -1,0 +1,184 @@
+<ion-view id="custombootstrap">
+    <ion-pane>
+        <ion-content class="has-header">
+            <div class="form-column">
+                <ion-list class="list animate-fade-slide-in-right">
+                    <ion-item class="text-left" style="border:none">
+                        <div style="float:left;width:90%">
+                            <label class="item item-input item-stacked-label" style="background: white; border:none">
+                                <input id="txtDriveName" name="txtDriveName" 
+                                       style="border-bottom:solid;border-width:1px;border-color:silver" 
+                                       type="text" placeholder="{{DriverName}}" ng-model="entry.DriverName">
+                            </label>
+                            </div>
+                        <div style="float:right;width:10%">
+                            <img src="img/Search.png" style="width:25px;height:25px;margin-right:10px;margin-top:5px" ng-click="actionSearchDriver(entry.DriverName)" />
+                        </div>
+                    </div>
+                    </ion-item>
+                    <ion-item class="text-left" style="border:none">
+                        <div style="float:left;width:90%">
+                            <label class="item item-input item-stacked-label" style="background: white; border:none">
+                                <input id="AssistantName" name="AssistantName" 
+                                       style="border-bottom:solid;border-width:1px;border-color:silver" 
+                                       type="text" placeholder="{{AssistantName}}" ng-model="entry.AssistantName">
+                            </label>
+                        </div>
+                        <div style="float:right;width:10%">
+                            <img src="img/Search.png" style="width:25px;height:25px;margin-right:10px;margin-top:5px" ng-click="actionSearchAssistant(entry.AssistantName)" />
+                        </div>
+                    </ion-item>
+                    <ion-item class="text-center" style="border:none">
+                        <button class="col col-90 button dev-button img-centered" style="width:100%;" ng-click="actionReportArrival()">Report Arrival</button>
+                    </ion-item>
+                    <ion-item class="text-center" style="border:none">
+                        <table style="width:100%">
+                        <tr>
+                            <td>
+                                <div style="width:100%">
+                                    <label style="color:black">Image Before</label>
+                                    <br />
+                                    <img style="width:100px;height:100px;border:solid" id="imgImageBefore" ng-src="data:image/jpeg;base64,{{entry.ImageBefore}}" ng-click="addMedia('Before')" ng-if="ImageBefore !== null">
+                                    <img style="width:100px;height:100px;border:solid" id="imgImageBefore" ng-src="img/no_profile_image.png" ng-click="addMedia('Before')" ng-if="ImageBefore === null">
+                                </div>
+                            </td>
+                            <td>
+                                <div style="width:100%">
+                                    <label style="color:black">Image After</label>
+                                    <br />
+                                    <img style="width:100px;height:100px;border:solid" id="imgImageAfter" ng-src="data:image/jpeg;base64,{{entry.ImageAfter}}" ng-click="addMedia('After')" ng-if="ImageAfter !== null">
+                                    <img style="width:100px;height:100px;border:solid" id="imgImageAfter" ng-src="img/no_profile_image.png" ng-click="addMedia('After')" ng-if="ImageAfter === null">
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td>
+                                <div style="width:100%">
+                                    <label style="color:black">Plate Number</label>
+                                    <br />
+                                    <img style="width:100px;height:100px;border:solid" id="imgPlateNumber" ng-src="data:image/jpeg;base64,{{entry.PlateNumber}}" ng-click="addMedia('PlateNumber')" ng-if="PlateNumber !== null">
+                                    <img style="width:100px;height:100px;border:solid" id="imgPlateNumber" ng-src="img/no_profile_image.png" ng-click="addMedia('PlateNumber')" ng-if="PlateNumber === null">
+                                </div>
+                            </td>
+                            <td>
+                                <div style="width:100%">
+                                    <label style="color:black">Company Name</label>
+                                    <br />
+                                    <img style="width:100px;height:100px;border:solid" id="imgCompanyName" ng-src="data:image/jpeg;base64,{{entry.CompanyName}}" ng-click="addMedia('CompanyName')" ng-if="CompanyName !== null">
+                                    <img style="width:100px;height:100px;border:solid" id="imgCompanyName" ng-src="img/no_profile_image.png" ng-click="addMedia('CompanyName')" ng-if="CompanyName === null">
+                                </div>
+                            </td>
+                        </tr> -->
+                        </table>
+                    </ion-item>
+                    <ion-item class="text-center" style="border:none">
+                        <button class="col col-90 button dev-button img-centered" style="width:100%;" ng-click="actionResolveCase()">Case Resolved</button>
+                    </ion-item>
+                </ion-list>
+                <hr />
+                <h3 style="margin-left:10px">Early Response Team</h3>
+                <ion-list class="list animate-fade-slide-in-right">
+                    <!-- <ion-item class="text-left" style="border:none">
+                        <label class="item item-input item-stacked-label" style="background: white; border:none">
+                            <label style="color:black">Landmark</label>
+                            <input name="Landmark" id="Landmark" style="border-bottom:solid;border-width:1px;border-color:silver" type="text" placeholder="Landmark" ng-model="entry.Landmark" />
+                        </label>
+                    </ion-item> -->
+                    <!-- <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <label style="color:black">Vehicle involved</label>
+                            <br />
+                            <select name="VehicleInvolved" id="VehicleInvolved" ng-model="entry.VehicleInvolved">
+                                <option value="Multiple">Multiple</option>
+                                <option value="Motorcycle">Motorcycle</option>
+                                <option value="Car">Car</option>
+                                <option value="Bus">Bus</option>
+                                <option value="Van/Small Lorry">Van/Small Lorry</option>
+                                <option value="Lorry">Lorry</option>
+                            </select>
+                        </div>
+                    </ion-item>
+                    <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <label style="color:black">Source of Info</label>
+                            <br />
+                            <select name="SourceOfInfo" id="SourceOfInfo" ng-model="entry.SourceOfInfo">
+                                <option value="Police Traffic">Police Traffic</option>
+                                <option value="Authority">Authority</option>
+                                <option value="ITIS">ITIS</option>
+                                <option value="Citizen">Citizen</option>
+                            </select>
+                        </div>
+                    </ion-item> -->
+                    <!-- <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <label style="color:black">Authorities Involved</label>
+                            <br />
+                            <select name="AuthoritiesInvolved" id="AuthoritiesInvolved" ng-model="entry.AuthoritiesInvolved">
+                                <option value="Police Traffic">Police Traffic</option>
+                                <option value="Authority">Authority</option>
+                            </select>
+                        </div>
+                    </ion-item> -->
+                    <ion-item class="text-left" style="border:none">
+                        <label class="item item-input item-stacked-label" style="background: white; border:none">
+                            <label style="color:black">Remarks</label>
+                            <input name="Remarks" id="Remarks" style="border-bottom:solid;border-width:1px;border-color:silver" type="text" placeholder="Remarks" ng-model="entry.Remarks" />
+                        </label>
+                    </ion-item>
+                </ion-list>
+                <hr />
+                <!-- <h3 style="margin-left:10px">Citizen</h3>
+                <ion-list class="list animate-fade-slide-in-right">
+                    <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <label style="color:black">Are you satisfied with our service ?</label>
+                            <br />
+                            <select name="UserSatisfaction" id="UserSatisfaction" ng-model="entry.UserSatisfaction" >
+                                <option value="Very Satisfy">Very Satisfy</option>
+                                <option value="Satisfy">Satisfy</option>
+                                <option value="Not Satisfy">Not Satisfy</option>
+                            </select>
+                        </div>
+                    </ion-item>
+                    <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <label style="color:black">Is our service efficient in reducing traffic congestion ?</label>
+                            <br />
+                            <select name="ServiceEfficiency" id="ServiceEfficiency" ng-model="entry.ServiceEfficiency">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Not Sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </ion-item>
+                    <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <label style="color:black">In your opinion, should we continue this service</label>
+                            <br />
+                            <select name="ServiceContinuation" id="ServiceContinuation" ng-model="entry.ServiceContinuation">
+                                <option value="Need">Need</option>
+                                <option value="No Need">No Need</option>
+                                <option value="Not Sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </ion-item>
+                    <ion-item class="text-left" style="border:none">
+                        <label class="item item-input item-stacked-label" style="background: white; border:none">
+                            <span style="color:black">Have opinion ? Write here</span>
+                            <input name="UserOpinion" id="UserOpinion" style="border-bottom:solid;border-width:1px;border-color:silver" type="text" placeholder="Your opinion" ng-model="entry.UserOpinion" />
+                        </label>
+                    </ion-item>
+                </ion-list>
+                <ion-list class="list animate-fade-slide-in-right">
+                    <ion-item class="text-left" style="border:none">
+                        <div class="col-lg-10 col-md-9 col-sm-10 col-xs-12">
+                            <button class="col col-90 button dev-button img-centered" style="width:100%;margin-bottom:15px" ng-click="actionCompleteCase(entry.Landmark, entry.VehicleInvolved, entry.SourceOfInfo, entry.AuthoritiesInvolved, entry.Remarks, entry.UserSatisfaction, entry.ServiceEfficiency, entry.ServiceContinuation, entry.UserOpinion)">Finish !</button>
+                        </div>
+                    </ion-item>
+                </ion-list> -->
+                
+            </div>
+        </ion-content>
+    </ion-pane>
+</ion-view>

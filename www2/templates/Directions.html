@@ -1,0 +1,23 @@
+<ion-view id="direction" ng-init="initMap()">
+
+
+    <ion-content style="background-color:transparent">
+        <!--        <input id="autocomplete" placeholder="Enter your address" type="text"></input>-->
+        <!--        <ion-label id="autocomplete" placeholder="Enter your address" type="text" color="primary" floating>Floating Label</ion-label>-->
+
+        <!--
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input id="autocomplete" placeholder="Enter your address" type="text">
+        </label>
+-->
+        <img ng-click="download()" class="animated bounceInDown top-logo" id="logo" src="img/header_logo.png" width="40%" height="auto" style="margin-top:5%; margin-left: 32%; position: relative;">
+        <ion-google-place placeholder="Your Destination" ng-model="location" current-location="true" style ="margin: auto; width:80%; margin-top: 20%; margin-bottom:10%; box-shadow: 0 0 3px #000000; border-radius: 8px;"></ion-google-place>
+        
+        <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+            <button class="col col-90 button dev-button img-centered" style="width:100%; line-height:10px" ng-click="sub(location)">
+                NAVIGATE
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,51 @@
+<ion-view id="Event">
+    <ion-content padding="true">
+        <ion-refresher class="spinner-balanced" on-refresh="reload()"></ion-refresher>
+        <div class="text-center">
+            <ion-spinner class="spinner-balanced" ng-show="loading"></ion-spinner>
+        </div>
+        <div ng-show="!loading">
+            <div class="text-center">
+                <img ng-click="download()" class="ui image centered" id="logo" src="{{data.icon}}" width="35%" height="auto">
+            </div>
+            <div class="text-center padding-xxs">
+                <h4 style="color:white">{{data.type}}</h4></div>
+            <br>
+            <ion-list>
+                <ion-item class="item-divider item-icon-right"><b>Details</b> <i class="icon ion-bookmark"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content">{{data.details}}</h3>
+                </ion-item>
+            </ion-list>
+            <br>
+            <ion-list>
+                <ion-item class="item-divider item-icon-right"><b>Dates</b> <i class="icon ion-ios-calendar-outline"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content"><strong>{{data.date}}</strong></h3>
+                </ion-item>
+            </ion-list>
+            <br>
+            <ion-list>
+                <ion-item class="item-divider item-icon-right"><b>Location</b> <i class="icon ion-location"></i></ion-item>
+                <ion-item class="item-content">
+                    <h3 class="item-content"><strong>{{data.location}}</strong></h3>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="list card">
+            <div class="item padding-0" ng-click="actionMap()">
+                <div class="responsive-container">
+                    <canvas width=800 height=500></canvas>
+                    <div class="responsive-content">
+                        <div class="iframe-container">
+                            <iframe class="disable-scroll" id='map' width="100%" height="100%" frameborder="0" style="border:0" ng-src="{{mapurl}}" ng-if="mapurl">
+                            </iframe>
+                            <p class="padding" ng-if="!mapurl">Location is not available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,50 @@
+<ion-view id="ert">
+    <ion-content scroll="true">
+        <div class="list card" style="margin:10px">
+
+            <!--
+            <div class="item item-avatar">
+                <img src="mcfly.jpg">
+                <h2>Marty McFly</h2>
+                <p>November 05, 1955</p>
+            </div>
+-->
+
+            <div class="item item-body" style="text-align:center">
+                <img ng-src="{{imageBefore}}" width="40%" height="auto">
+                <p style="font-size: 1.8em; color: black;"><strong>{{job.title}}</strong></p>
+                <p style="color:black">
+                    <div class="row">
+                        <div class="ertL constant-color-black small-size col-33">Expiry Date : </div>
+                        <div class="ertL constant-color-black small-size col-67">{{job.reported_time}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="ertL constant-color-black small-size col-33">Location : </div>
+                        <div class="ertL constant-color-black small-size col-67">{{job.location}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="ertL constant-color-black small-size col-33">GPS : </div>
+                        <div class="ertL constant-color-black small-size col-67">{{job.latitude}}, {{job.longitude}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="ertL constant-color-black small-size col-33">Detail : </div>
+                        <div class="ertL constant-color-black small-size col-67">{{job.description}}</div>
+                    </div>
+
+                </p>
+            </div>
+
+        </div>
+        <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+            <button class="col col-90 button dev-button img-centered" style="width:100%; line-height:10px" ng-click="navigateToDistance()">
+                NAVIGATE
+            </button>
+        </div>
+        <div class="row " style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+            <button class="col col-90 button dev-button img-centered" style="width:100%; line-height:10px" ng-click="satisClick()">
+                PROCEED
+            </button>
+        </div>
+
+    </ion-content>
+</ion-view>

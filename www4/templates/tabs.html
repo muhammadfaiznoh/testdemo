@@ -1,0 +1,132 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-tabs class="tabs-icon-top tabs-color-active-light">
+    <!-- <div>
+        <img class="abs-center image-top" ng-src="img/searchDir.png" height="120%">
+    </div> -->
+    <ion-tab id="stateDrawer" icon-off="ion-drag" icon-on="ion-drag" ng-click="toggleDrawer()" style="margin-top:7px">
+            <ion-nav-view name="Drawer">
+                
+            </ion-nav-view>
+        </ion-tab>
+       
+    <!-- <ion-tab id="stateDrawer" icon-off="ion-drag" icon-on="ion-drag" menu-toggle="left" style="margin-top:7px">
+            <ion-side-menu side="left" style="padding:0; margin:0; position:absolute; top:10%">
+                    <header class="bar bar-header bar-stable">
+                      <h1 class="title">Left</h1>
+                    </header>
+                    <ion-content scroll="false">
+                      <ion-list>
+                        <ion-item  menu-close href="">
+                          Search
+                        </ion-item>
+                        <ion-item  menu-close href="">
+                          Browse
+                        </ion-item>
+                        <ion-item  menu-close href="">
+                          Playlists
+                        </ion-item>
+                      </ion-list>
+                    </ion-content>
+                  </ion-side-menu>
+        </ion-tab> -->
+
+<!-- 
+    <ion-tab icon-off="ion-checkmark" icon-on="ion-checkmark" href="#/tab/mapfilter">
+        <ion-nav-view name="MapFilter"></ion-nav-view>
+    </ion-tab>
+-->    
+    <ion-tab icon-off="ion-map" icon-on="ion-map" href="#/tab/mapmain">
+        <ion-nav-view name="MapMain"></ion-nav-view>    
+    </ion-tab>
+
+    <ion-tab icon-off="ion-bonfire" icon-on="ion-bonfire"  href="#/tab/lighthouse">
+        <ion-nav-view name="LightHouse"></ion-nav-view>    
+    </ion-tab>
+
+    <!-- <ion-tab ng-click="actionDirections()">
+        <ion-nav-view name="SearchPlace"></ion-nav-view>
+    </ion-tab> -->
+<!--
+    <ion-tab>
+        <ion-nav-view></ion-nav-view>
+    </ion-tab>
+-->
+ 
+    <!-- <ion-tab ng-if="staff===undefined || staff === false || staff===null" icon-off="ion-settings" icon-on="ion-settings" ng-click="actionReporttype()" >
+
+        <ion-nav-view name="ReportGrid"></ion-nav-view>
+    </ion-tab>
+    <ion-tab ng-if="staff === false && authorize === false" icon-off="ion-settings" icon-on="ion-settings" ng-click="showPopup()">
+        <ion-nav-view name="ReportGrid"></ion-nav-view>
+    </ion-tab> -->
+
+    <ion-tab id="ERTButton" icon-off="ion-settings" icon-on="ion-settings" href="#/tab/ert"  badge="badgeCounts" badge-style="badge-assertive">
+        <ion-nav-view name="ERT"></ion-nav-view>
+    </ion-tab>
+    <!--
+    <ion-tab ng-if="staff === true" icon-off="ion-ios-telephone" icon-on="ion-ios-telephone" ng-click="CallNumber()">
+
+                <ion-nav-view name="tab-account"></ion-nav-view>
+    </ion-tab>
+-->
+
+
+</ion-tabs>
+
+
+<ion-drawer-vertical-wrapper class="has-footer" direction="up" state="closed" delegate-handle="menuDrawer">
+    <ion-drawer-vertical-content>
+        <div style="height:100%; position: relative" ng-click="closeDrawer()"></div>
+        <!-- <div style="position:absolute; top:65%">
+      
+            <div class="row" style=" margin-top:12%">
+
+                <div class="col" style=" padding:0; margin:0;">
+
+                    <a ng-click="actionHighlight()" class="button button-clear height-line"><img src="img/drawer/HIGHLIGHT.png" class="icon icon-size" width="75%">
+                    </a>
+
+                </div>
+                <div class="col" style="padding:0; margin:0">
+
+                    <a ng-click="actionCCTV()" class="button button-clear height-line"><img src="img/drawer/CCTV.png" class="icon icon-size" width="74%">
+                    </a>
+
+                </div>
+                <div class="col" style="padding:0; margin:0">
+
+                    <a ng-click="actionVMS()" class="button button-clear height-line"><img src="img/drawer/VMS.png" class="icon  icon-size" width="39%">
+
+                    </a>
+                </div>
+                <div class="col" style="padding:0; margin:0">
+
+                    <a ng-click="actionParking()" class="button button-clear height-line"><img src="img/drawer/PARKING.png" class="icon  icon-size" width="64%">
+
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="button-height" style="padding:0; margin:0; position:absolute; top:84%">
+            <div class="row">
+                <div class="col" style="padding:0; margin:0; margin-right:5px;">
+                    <a ng-click="actionSetting()" class="button button-clear button-setting"><img src="img/drawer/SETTING.png" class="icon-size" width="25%"></a>
+                </div>
+                <!-- <div class="col" style="padding:0; margin:0;">
+                    <a ng-click="sleep()" class="button button-clear button-setting"><img src="img/drawer/SLEEP-MODE.png" class="icon-size" width="25%"></a>
+                </div> -->
+            </div>
+        </div>
+
+
+    </ion-drawer-vertical-content>
+    <ion-drawer-vertical-handle />
+</ion-drawer-vertical-wrapper>
+</div>

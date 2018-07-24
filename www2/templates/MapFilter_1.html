@@ -1,0 +1,58 @@
+<ion-view id='mapfilter'>
+    <ion-content scroll="true">
+        <table style="width:100%">
+        <tr>
+            <td colspan="2" style="background-image: url('img/headerbar.png')">
+                <h2>Map Filter</h2>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left:10px">
+                <input style="width:35px;height:35px" type="checkbox" id="cbkFilterCCTV" name="cbkFilterCCTV" checked onchange="FilterChangeCCTV()" />
+            </td>
+            <td><span style="color:black;font-size:30px">CCTV</span></td>
+        </tr>
+        <tr>
+            <td style="padding-left:10px">
+                <input style="width:35px;height:35px" type="checkbox" id="cbkFilterVMS" name="cbkFilterVMS" checked onchange="FilterChangeVMS()" />
+            </td>
+            <td><span style="color:black;font-size:30px">VMS</span></td>
+        </tr>
+        <tr>
+            <td style="width:50px;padding-left:10px">
+                <input style="width:35px;height:35px" type="checkbox" id="cbkFilterParking" name="cbkFilterParking" checked onchange="FilterChangeParking()" />
+            </td>
+            <td><span style="color:black;font-size:30px">Parking</span></td>
+        </tr>
+        <tr>
+            <td style="width:50px;padding-left:10px">
+                <input style="width:35px;height:35px" type="checkbox" id="cbkFilterIncident" name="cbkFilterIncident" checked onchange="FilterChangeIncident()" />
+            </td>
+            <td><span style="color:black;font-size:30px">Incident</span></td>
+        </tr>
+        <tr>
+            <td style="width:50px;padding-left:10px">
+                <input style="width:35px;height:35px" type="checkbox" id="cbkFilterEvent" name="cbkFilterEvent" checked onchange="FilterChangeEvent()" />
+            </td>
+            <td><span style="color:black;font-size:30px">Event</span></td>
+        </tr>
+        </table>
+        <script>
+        function FilterChangeCCTV() {
+            sessionStorage.MapFilterCCTV = document.getElementById("cbkFilterCCTV").checked;
+        }
+        function FilterChangeVMS() {
+            sessionStorage.MapFilterVMS = document.getElementById("cbkFilterVMS").checked;
+        }
+        function FilterChangeParking() {
+            sessionStorage.MapFilterParking = document.getElementById("cbkFilterParking").checked;
+        }
+        function FilterChangeIncident() {
+            sessionStorage.MapFilterIncident = document.getElementById("cbkFilterIncident").checked;
+        }
+        function FilterChangeEvent() {
+            sessionStorage.MapFilterEvent = document.getElementById("cbkFilterEvent").checked;
+        }
+        </script>
+    </ion-content>
+</ion-view>

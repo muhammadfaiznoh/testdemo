@@ -1,0 +1,38 @@
+<ion-view hide-nav-bar="true" id="forgot">
+    <ion-content>
+
+        <div class="top-content">
+            <div class="top-content-item">
+                 <img id="logo" src="img/headerbg.png" width="100%" height="auto" style="position:absolute;">
+                <img ng-click="download()" class="animated headShake top-logo" id="logo" src="img/header_logo.png" width="40%" height="auto" style="margin-top:5%; margin-left: 32%; position: relative;">
+            </div>
+        </div>
+
+        <form ng-submit="" class="" novalidate name="userForm">
+
+            <div class="margin-vertical-xlg">
+                <h3 class="form-title text-center">Forgot password eDrive?</h3>
+                <div class="sub-title text-center">The new password will be sent to
+                    <br>entered e-mail address.</div>
+            </div>
+            <div class="row">
+                <div class="col list list-inset" style="margin-top:0;">
+                    <label class="item item-input rounded" style="padding: 0; padding-left:10px; border-radius: 8px;">
+                        <input type="email" placeholder="EMAIL" ng-model="userNew.email">
+                    </label>
+                </div>
+            </div>
+            <div class="row" style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+                <button class="col button dev-button" style="width:100%; line-height:10px" ng-click="actionSubmit(userNew.email)">
+                    SUBMIT
+                </button>
+            </div>
+            <div class="row" style="padding-left: 20px; padding-right: 20px; margin-top:1%">
+                <button class="col button dev-button" style="width:100%; line-height:10px" ng-click="actionBack()">
+                    BACK
+                </button>
+            </div>
+
+        </form>
+    </ion-content>
+</ion-view>

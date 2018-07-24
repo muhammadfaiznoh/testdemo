@@ -17,6 +17,7 @@ angular.module('eDrive', [
 //    'ion-place-tools'
     'cb.x2js',
     'ngCordovaOauth',
+    'ion-floating-menu',
 //    'ion-place-tools'
     'ion-google-place',
     'ngCordovaOauth',
